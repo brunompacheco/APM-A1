@@ -320,4 +320,4 @@ references/
 
 # figures
 report/figures/*
-!report/figures/.gitkeep
+!report/figures/*.pdf
