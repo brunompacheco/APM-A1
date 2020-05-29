@@ -1,33 +1,268 @@
-digraph Tree {
-node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
-edge [fontname=helvetica] ;
-0 [label=<trace:Age &le; 63.5<br/>gini = 0.752<br/>samples = 1457<br/>value = [258.6, 55.0, 216.0, 343.5, 136.0]<br/>class = Discharge Init Exam>, fillcolor="#e9e9fc"] ;
-1 [label=<trace:Insurance@STAT &le; 0.5<br/>gini = 0.754<br/>samples = 1126<br/>value = [186.6, 43.0, 179.0, 268.0, 114.0]<br/>class = Discharge Init Exam>, fillcolor="#e5e4fb"] ;
-0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
-5 [label=<trace:Age &le; 61.5<br/>gini = 0.754<br/>samples = 354<br/>value = [66.0, 18.0, 54.0, 79.5, 26.0]<br/>class = Discharge Init Exam>, fillcolor="#f0f0fd"] ;
-1 -> 5 ;
-7 [label=<gini = 0.747<br/>samples = 342<br/>value = [63.0, 16.0, 54.0, 78.0, 22.0]<br/>class = Discharge Init Exam>, fillcolor="#eeeefd"] ;
-5 -> 7 ;
-8 [label=<trace:Age &le; 62.5<br/>gini = 0.717<br/>samples = 12<br/>value = [3.0, 2.0, 0.0, 1.5, 4.0]<br/>class = Treatment A2>, fillcolor="#fce5f7"] ;
-5 -> 8 ;
-9 [label=<gini = 0.446<br/>samples = 5<br/>value = [0.6, 0.0, 0.0, 1.0, 4.0]<br/>class = Treatment A2>, fillcolor="#ee7ed6"] ;
-8 -> 9 ;
-10 [label=<gini = 0.583<br/>samples = 7<br/>value = [2.4, 2.0, 0.0, 0.5, 0.0]<br/>class = Treatment B>, fillcolor="#fbeee4"] ;
-8 -> 10 ;
-6 [label=<trace:Age &le; 39.5<br/>gini = 0.753<br/>samples = 772<br/>value = [120.6, 25.0, 125.0, 188.5, 88.0]<br/>class = Discharge Init Exam>, fillcolor="#e2e1fb"] ;
-1 -> 6 ;
-11 [label=<trace:Age &le; 15.5<br/>gini = 0.762<br/>samples = 402<br/>value = [69.6, 18.0, 56.0, 94.0, 48.0]<br/>class = Discharge Init Exam>, fillcolor="#e9e9fc"] ;
-6 -> 11 ;
-13 [label=<gini = 0.75<br/>samples = 61<br/>value = [7.8, 3.0, 15.0, 13.5, 6.0]<br/>class = Discharge Test>, fillcolor="#f6fefc"] ;
-11 -> 13 ;
-14 [label=<gini = 0.758<br/>samples = 341<br/>value = [61.8, 15.0, 41.0, 80.5, 42.0]<br/>class = Discharge Init Exam>, fillcolor="#ebeafc"] ;
-11 -> 14 ;
-12 [label=<gini = 0.738<br/>samples = 370<br/>value = [51.0, 7.0, 69.0, 94.5, 40.0]<br/>class = Discharge Init Exam>, fillcolor="#e5e5fc"] ;
-6 -> 12 ;
-2 [label=<trace:Insurance@PRIV &le; 0.5<br/>gini = 0.73<br/>samples = 331<br/>value = [72.0, 12.0, 37.0, 75.5, 22.0]<br/>class = Discharge Init Exam>, fillcolor="#fafafe"] ;
-0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
-3 [label=<gini = 0.72<br/>samples = 231<br/>value = [45.6, 8.0, 27.0, 57.0, 12.0]<br/>class = Discharge Init Exam>, fillcolor="#eae9fc"] ;
-2 -> 3 ;
-4 [label=<gini = 0.736<br/>samples = 100<br/>value = [26.4, 4.0, 10.0, 18.5, 10.0]<br/>class = Treatment B>, fillcolor="#fbebe0"] ;
-2 -> 4 ;
+digraph "imported_1590783536.788249" {
+	graph [bgcolor=transparent rankdir=LR]
+	node [shape=box]
+	5062980944 [label="Check Treatment A1"]
+	5063290440 [label="Check Treatment A2"]
+	5063299648 [label="Check Treatment A3"]
+	5063431168 [label="Check Treatment B"]
+	5063430664 [label="Control Call"]
+	5063431504 [label="Control Call (+)"]
+	5063290496 [label="Decide Treatment"]
+	5063301664 [label=Discharge]
+	5063300656 [label="Discharge Init Exam"]
+	5063431000 [label="Discharge Test"]
+	5063301944 [label="Inform Authority Fill Form"]
+	5063302112 [label="Inform Authority Send Form"]
+	5063290272 [label="Inform about Isolation"]
+	5063430944 [label="Initial Exam"]
+	5063430888 [label="Initial Exam Decision"]
+	5063431560 [label="Prescripe Special Medication"]
+	5063300544 [label=Referral]
+	5063303120 [label=Register]
+	5063431336 [label="Register Facility"]
+	5063300880 [label="Test III"]
+	5063302336 [label="Test III Decision"]
+	5063300936 [label="Treatment A1"]
+	5063288704 [label="Treatment A2"]
+	5063430832 [label="Treatment A3"]
+	5063299704 [label="Treatment B"]
+	5063301328 [label="" fillcolor=black style=filled]
+	5063302504 [label="" fillcolor=black style=filled]
+	5063301608 [label="" fillcolor=black style=filled]
+	5063299928 [label="" fillcolor=black style=filled]
+	5063289768 [label="" fillcolor=black style=filled]
+	5063301496 [label="" fillcolor=black style=filled]
+	5063299256 [label="" fillcolor=black style=filled]
+	5063300264 [label="" fillcolor=black style=filled]
+	5063430496 [label="" fillcolor=black style=filled]
+	5063302448 [label="" fillcolor=black style=filled]
+	5063290384 [label="" fillcolor=black style=filled]
+	5063303008 [label="" fillcolor=black style=filled]
+	5063290832 [label="" fillcolor=black style=filled]
+	5063302560 [label="" fillcolor=black style=filled]
+	5063289488 [label="" fillcolor=black style=filled]
+	5063289992 [label="" fillcolor=black style=filled]
+	5063300040 [label="" fillcolor=black style=filled]
+	5063301384 [label="" fillcolor=black style=filled]
+	5063302728 [label="" fillcolor=black style=filled]
+	5063430608 [label="" fillcolor=black style=filled]
+	5063302840 [label="" fillcolor=black style=filled]
+	5063301160 [label="" fillcolor=black style=filled]
+	5063302896 [label="" fillcolor=black style=filled]
+	5063302056 [label="" fillcolor=black style=filled]
+	5063301552 [label="" fillcolor=black style=filled]
+	5063289880 [label="" fillcolor=black style=filled]
+	5063300824 [label="" fillcolor=black style=filled]
+	5063431280 [label="" fillcolor=black style=filled]
+	5063290216 [label="" fillcolor=black style=filled]
+	5063301776 [label="" fillcolor=black style=filled]
+	5063430776 [label="" fillcolor=black style=filled]
+	5063431448 [label="" fillcolor=black style=filled]
+	5063290552 [label="" fillcolor=black style=filled]
+	5063300376 [label="" fillcolor=black style=filled]
+	5063207232 [label="" fillcolor=black style=filled]
+	5063301272 [label="" fillcolor=black style=filled]
+	5063301888 [label="" fillcolor=black style=filled]
+	5063303064 [label="" fillcolor=black style=filled]
+	5063431112 [label="" fillcolor=black style=filled]
+	5063289208 [label="" fillcolor=black style=filled]
+	5063299368 [label="" fillcolor=black style=filled]
+	5063299816 [label="" fillcolor=black style=filled]
+	5063299592 [label="" fillcolor=black style=filled]
+	5063302280 [label="" fillcolor=black style=filled]
+	5063290720 [label="" fillcolor=black style=filled]
+	5063301048 [label="" fillcolor=black style=filled]
+	5063302952 [label="" fillcolor=black style=filled]
+	5063288480 [label="" fillcolor=black style=filled]
+	node [fixedsize=true shape=circle width=1]
+	5063207064 [label=1 fillcolor=green style=filled]
+	5063289040 [label=""]
+	5063208856 [label=""]
+	5063205496 [label=""]
+	5063101520 [label=""]
+	5063287584 [label=""]
+	5063197920 [label=""]
+	5063207624 [label=""]
+	5063208352 [label=""]
+	5063100792 [label=""]
+	5063101968 [label=""]
+	5063287864 [label=""]
+	5063288088 [label=""]
+	5063099168 [label=""]
+	5063200440 [label=""]
+	5063099952 [label=""]
+	5063287976 [label=""]
+	5063205664 [label=""]
+	5063100960 [label=""]
+	5063199600 [label=""]
+	5063180640 [label=""]
+	5063287248 [label=""]
+	5063198032 [label=""]
+	5063101688 [label=""]
+	5063206672 [label=""]
+	5063184112 [label=""]
+	5063206056 [label=""]
+	5063205328 [label=""]
+	5063206560 [label=""]
+	5063208072 [label=""]
+	5063098776 [label=""]
+	5063290104 [label=""]
+	5063100568 [label=""]
+	5063286968 [label=""]
+	5063287416 [label=""]
+	5063207344 [label=""]
+	5063288312 [label=""]
+	5063199320 [label=""]
+	5063200160 [label=""]
+	5063098608 [label=""]
+	5063102136 [label=""]
+	5063183160 [label="" fillcolor=orange style=filled]
+	5063290440 -> 5063290104
+	5062980944 -> 5063205328
+	5063430832 -> 5063286968
+	5063290496 -> 5063287976
+	5063303120 -> 5063287248
+	5063430664 -> 5063102136
+	5063431336 -> 5063099952
+	5063300880 -> 5063208856
+	5063430888 -> 5063288312
+	5063300936 -> 5063206560
+	5063431504 -> 5063287864
+	5063431168 -> 5063199600
+	5063301664 -> 5063183160
+	5063431560 -> 5063101520
+	5063302112 -> 5063207624
+	5063430944 -> 5063100568
+	5063300656 -> 5063199320
+	5063299648 -> 5063290104
+	5063302336 -> 5063205496
+	5063290272 -> 5063199320
+	5063301944 -> 5063208352
+	5063288704 -> 5063286968
+	5063300544 -> 5063200440
+	5063431000 -> 5063101520
+	5063299704 -> 5063101688
+	5063301328 -> 5063098608
+	5063302504 -> 5063101968
+	5063301608 -> 5063100960
+	5063299928 -> 5063198032
+	5063289768 -> 5063206056
+	5063301496 -> 5063098776
+	5063299256 -> 5063197920
+	5063300264 -> 5063197920
+	5063430496 -> 5063101968
+	5063302448 -> 5063098608
+	5063290384 -> 5063100960
+	5063303008 -> 5063198032
+	5063290832 -> 5063206056
+	5063302560 -> 5063098776
+	5063289040 -> 5063302448 [label="0s" penwidth=1.0]
+	5063208856 -> 5063302336 [label="5m" penwidth=1.0066806597631037]
+	5063208856 -> 5063302952 [label="0s" penwidth=1.0]
+	5063205496 -> 5063431560 [label="1h" penwidth=1.0750306155605551]
+	5063205496 -> 5063431000 [label="1h" penwidth=1.0785716472993816]
+	5063205496 -> 5063288480 [label="0s" penwidth=1.0]
+	5063101520 -> 5063299256 [label="0s" penwidth=1.0]
+	5063101520 -> 5063301160 [label="0s" penwidth=1.0]
+	5063287584 -> 5063300544 [label="14h" penwidth=2.023841683197766]
+	5063287584 -> 5063302896 [label="0s" penwidth=1.0]
+	5063197920 -> 5063302504 [label="0s" penwidth=1.0]
+	5063197920 -> 5063300040 [label="0s" penwidth=1.0]
+	5063197920 -> 5063301384 [label="0s" penwidth=1.0]
+	5063207624 -> 5063430608 [label="0s" penwidth=1.0]
+	5063207624 -> 5063302840 [label="0s" penwidth=1.0]
+	5063208352 -> 5063302112 [label="7m" penwidth=1.008545956760549]
+	5063208352 -> 5063302728 [label="0s" penwidth=1.0]
+	5063100792 -> 5063301944 [label="2h" penwidth=1.1950268367230457]
+	5063101968 -> 5063431504 [label="7h" penwidth=1.565236774349799]
+	5063287864 -> 5063289488 [label="0s" penwidth=1.0]
+	5063287864 -> 5063289992 [label="0s" penwidth=1.0]
+	5063288088 -> 5063430496 [label="0s" penwidth=1.0]
+	5063099168 -> 5063300264 [label="0s" penwidth=1.0]
+	5063200440 -> 5063431336 [label="59m" penwidth=1.071084709735597]
+	5063200440 -> 5063302056 [label="0s" penwidth=1.0]
+	5063099952 -> 5063290496 [label="14m" penwidth=1.0178087380848764]
+	5063099952 -> 5063301552 [label="0s" penwidth=1.0]
+	5063287976 -> 5063301608 [label="0s" penwidth=1.0]
+	5063287976 -> 5063289768 [label="0s" penwidth=1.0]
+	5063287976 -> 5063299592 [label="0s" penwidth=1.0]
+	5063205664 -> 5063301664 [label="22h" penwidth=2.5999999998002563]
+	5063205664 -> 5063302280 [label="0s" penwidth=1.0]
+	5063100960 -> 5063299928 [label="0s" penwidth=1.0]
+	5063100960 -> 5063290216 [label="0s" penwidth=1.0]
+	5063199600 -> 5063430776 [label="0s" penwidth=1.0]
+	5063199600 -> 5063431448 [label="0s" penwidth=1.0]
+	5063180640 -> 5063431168 [label="1h" penwidth=1.0759218453041806]
+	5063180640 -> 5063301776 [label="0s" penwidth=1.0]
+	5063287248 -> 5063430944 [label="16m" penwidth=1.0203595355882515]
+	5063198032 -> 5063299704 [label="20h" penwidth=2.4725491648733704]
+	5063101688 -> 5063289880 [label="0s" penwidth=1.0]
+	5063101688 -> 5063300824 [label="0s" penwidth=1.0]
+	5063206672 -> 5063303008 [label="0s" penwidth=1.0]
+	5063184112 -> 5063290384 [label="0s" penwidth=1.0]
+	5063206056 -> 5063301496 [label="0s" penwidth=1.0]
+	5063206056 -> 5063303064 [label="0s" penwidth=1.0]
+	5063206056 -> 5063431112 [label="0s" penwidth=1.0]
+	5063205328 -> 5063299368 [label="0s" penwidth=1.0]
+	5063205328 -> 5063299816 [label="0s" penwidth=1.0]
+	5063206560 -> 5062980944 [label="1h" penwidth=1.0942564329134654]
+	5063206560 -> 5063289208 [label="0s" penwidth=1.0]
+	5063208072 -> 5063300936 [label="8h" penwidth=1.5784684684834767]
+	5063098776 -> 5063430832 [label="4h" penwidth=1.349293873166543]
+	5063098776 -> 5063288704 [label="4h" penwidth=1.3478029241187908]
+	5063098776 -> 5063290552 [label="0s" penwidth=1.0]
+	5063290104 -> 5063301272 [label="0s" penwidth=1.0]
+	5063290104 -> 5063301888 [label="0s" penwidth=1.0]
+	5063100568 -> 5063430888 [label="6m" penwidth=1.0079010513289224]
+	5063286968 -> 5063290440 [label="19m" penwidth=1.0230673225494906]
+	5063286968 -> 5063299648 [label="17m" penwidth=1.0207619463491149]
+	5063286968 -> 5063300376 [label="0s" penwidth=1.0]
+	5063287416 -> 5063302560 [label="0s" penwidth=1.0]
+	5063207344 -> 5063290832 [label="0s" penwidth=1.0]
+	5063288312 -> 5063300656 [label="1h" penwidth=1.0873056630986107]
+	5063288312 -> 5063290272 [label="1m" penwidth=1.0023466949510589]
+	5063199320 -> 5063301328 [label="0s" penwidth=1.0]
+	5063199320 -> 5063290720 [label="0s" penwidth=1.0]
+	5063200160 -> 5063300880 [label="4h" penwidth=1.330182168038243]
+	5063200160 -> 5063301048 [label="0s" penwidth=1.0]
+	5063098608 -> 5063430664 [label="6h" penwidth=1.4935011436532433]
+	5063102136 -> 5063431280 [label="0s" penwidth=1.0]
+	5063102136 -> 5063207232 [label="0s" penwidth=1.0]
+	5063289488 -> 5063288088
+	5063289992 -> 5063100792
+	5063300040 -> 5063100792
+	5063301384 -> 5063208352
+	5063302728 -> 5063207624
+	5063430608 -> 5063099168
+	5063302840 -> 5063287584
+	5063301160 -> 5063287584
+	5063302896 -> 5063200440
+	5063302056 -> 5063099952
+	5063301552 -> 5063287976
+	5063289880 -> 5063206672
+	5063300824 -> 5063180640
+	5063431280 -> 5063289040
+	5063290216 -> 5063180640
+	5063301776 -> 5063199600
+	5063430776 -> 5063184112
+	5063431448 -> 5063205664
+	5063290552 -> 5063286968
+	5063300376 -> 5063290104
+	5063207232 -> 5063200160
+	5063301272 -> 5063287416
+	5063301888 -> 5063208072
+	5063303064 -> 5063208072
+	5063431112 -> 5063206560
+	5063289208 -> 5063205328
+	5063299368 -> 5063207344
+	5063299816 -> 5063205664
+	5063299592 -> 5063205664
+	5063302280 -> 5063183160
+	5063290720 -> 5063200160
+	5063301048 -> 5063208856
+	5063302952 -> 5063205496
+	5063288480 -> 5063101520
+	5063207064 -> 5063303120 [label="0s" penwidth=1.0]
+	overlap=false
+	fontsize=11
 }

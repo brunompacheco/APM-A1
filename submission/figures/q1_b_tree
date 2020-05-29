@@ -1,235 +1,235 @@
 digraph pt {
 	graph [bgcolor=transparent]
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"6828bf77-44e2-463f-9e05-1efcbdab7313" [label="->"]
+	"60b29955-566c-4237-b2ee-a18c3b5f6b51" [label="->"]
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"c1f0e1f4-4e3e-44b6-98a1-1c33d4266979" [label=X]
-	"6828bf77-44e2-463f-9e05-1efcbdab7313" -> "c1f0e1f4-4e3e-44b6-98a1-1c33d4266979"
+	"20caacf9-ebd5-48b4-8767-ddfd63460c0b" [label=X]
+	"60b29955-566c-4237-b2ee-a18c3b5f6b51" -> "20caacf9-ebd5-48b4-8767-ddfd63460c0b"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"c5491231-d2c6-4bd3-9c9e-c034b09f88b4" [label=tau fillcolor=black style=filled]
-	"c1f0e1f4-4e3e-44b6-98a1-1c33d4266979" -> "c5491231-d2c6-4bd3-9c9e-c034b09f88b4"
+	"12af9272-1f2d-4aa3-bac2-40f06e91db53" [label=tau fillcolor=black style=filled]
+	"20caacf9-ebd5-48b4-8767-ddfd63460c0b" -> "12af9272-1f2d-4aa3-bac2-40f06e91db53"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"2873ffc3-2a97-4ecd-a11d-9003bb076c03" [label=Register]
-	"c1f0e1f4-4e3e-44b6-98a1-1c33d4266979" -> "2873ffc3-2a97-4ecd-a11d-9003bb076c03"
+	"d42a7112-c787-4e49-8445-96720e23acd1" [label=Register]
+	"20caacf9-ebd5-48b4-8767-ddfd63460c0b" -> "d42a7112-c787-4e49-8445-96720e23acd1"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"d0437fcd-966f-404f-9ae4-486f3700ccd3" [label=X]
-	"6828bf77-44e2-463f-9e05-1efcbdab7313" -> "d0437fcd-966f-404f-9ae4-486f3700ccd3"
+	"650cc6ef-0a1b-43b3-821f-fd80bce10e68" [label=X]
+	"60b29955-566c-4237-b2ee-a18c3b5f6b51" -> "650cc6ef-0a1b-43b3-821f-fd80bce10e68"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"9180f1d0-0fda-4df0-a5f6-147ba9113504" [label=tau fillcolor=black style=filled]
-	"d0437fcd-966f-404f-9ae4-486f3700ccd3" -> "9180f1d0-0fda-4df0-a5f6-147ba9113504"
+	"b8667006-23fe-48ff-b4b3-7d1f50faffde" [label=tau fillcolor=black style=filled]
+	"650cc6ef-0a1b-43b3-821f-fd80bce10e68" -> "b8667006-23fe-48ff-b4b3-7d1f50faffde"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"550f9cca-a515-4569-82ef-dba49b849e83" [label="Initial Exam"]
-	"d0437fcd-966f-404f-9ae4-486f3700ccd3" -> "550f9cca-a515-4569-82ef-dba49b849e83"
+	"4803544b-de26-40d4-8f55-dcfa5a94612b" [label="Initial Exam"]
+	"650cc6ef-0a1b-43b3-821f-fd80bce10e68" -> "4803544b-de26-40d4-8f55-dcfa5a94612b"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"d6486854-1ced-4da9-a912-10d6c9ad5dec" [label=X]
-	"6828bf77-44e2-463f-9e05-1efcbdab7313" -> "d6486854-1ced-4da9-a912-10d6c9ad5dec"
+	"758ecbb1-2ceb-4426-b1e3-95e9d49997de" [label=X]
+	"60b29955-566c-4237-b2ee-a18c3b5f6b51" -> "758ecbb1-2ceb-4426-b1e3-95e9d49997de"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"60cf033e-5fb5-46e1-b110-69bbb27a14f5" [label=tau fillcolor=black style=filled]
-	"d6486854-1ced-4da9-a912-10d6c9ad5dec" -> "60cf033e-5fb5-46e1-b110-69bbb27a14f5"
+	"ccd0b737-db8b-472b-b5d0-6061d9a205e0" [label=tau fillcolor=black style=filled]
+	"758ecbb1-2ceb-4426-b1e3-95e9d49997de" -> "ccd0b737-db8b-472b-b5d0-6061d9a205e0"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"25cd5a7d-8e32-4297-a729-0209e458a277" [label="Initial Exam Decision"]
-	"d6486854-1ced-4da9-a912-10d6c9ad5dec" -> "25cd5a7d-8e32-4297-a729-0209e458a277"
+	"949ac667-1109-4e1d-8ba7-321d3155794d" [label="Initial Exam Decision"]
+	"758ecbb1-2ceb-4426-b1e3-95e9d49997de" -> "949ac667-1109-4e1d-8ba7-321d3155794d"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"f270b659-17f4-4f95-b2dd-49c6ddb1dc39" [label=X]
-	"6828bf77-44e2-463f-9e05-1efcbdab7313" -> "f270b659-17f4-4f95-b2dd-49c6ddb1dc39"
+	"2c3ee65c-f49a-40d8-a47b-10af5493dc35" [label=X]
+	"60b29955-566c-4237-b2ee-a18c3b5f6b51" -> "2c3ee65c-f49a-40d8-a47b-10af5493dc35"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"0692e5a0-79de-43de-a3b1-313d8587674d" [label=tau fillcolor=black style=filled]
-	"f270b659-17f4-4f95-b2dd-49c6ddb1dc39" -> "0692e5a0-79de-43de-a3b1-313d8587674d"
+	"f6e2a8b4-8261-4a9d-a98d-5917b822c08f" [label=tau fillcolor=black style=filled]
+	"2c3ee65c-f49a-40d8-a47b-10af5493dc35" -> "f6e2a8b4-8261-4a9d-a98d-5917b822c08f"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"feb19230-dc35-4b94-aee5-0c5fdf320028" [label="Inform about Isolation"]
-	"f270b659-17f4-4f95-b2dd-49c6ddb1dc39" -> "feb19230-dc35-4b94-aee5-0c5fdf320028"
+	"a35c8401-6fa7-4780-b655-147c21d84350" [label="Inform about Isolation"]
+	"2c3ee65c-f49a-40d8-a47b-10af5493dc35" -> "a35c8401-6fa7-4780-b655-147c21d84350"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"3d2ebe10-8675-4549-83c8-a69b7e93520c" [label="Discharge Init Exam"]
-	"f270b659-17f4-4f95-b2dd-49c6ddb1dc39" -> "3d2ebe10-8675-4549-83c8-a69b7e93520c"
+	"dad5eed6-82e1-41e1-8e61-68af7540fbdc" [label="Discharge Init Exam"]
+	"2c3ee65c-f49a-40d8-a47b-10af5493dc35" -> "dad5eed6-82e1-41e1-8e61-68af7540fbdc"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"59da58d0-c58d-4b55-9502-024a71726cb0" [label=X]
-	"6828bf77-44e2-463f-9e05-1efcbdab7313" -> "59da58d0-c58d-4b55-9502-024a71726cb0"
+	"2ad36e8b-9710-485a-b876-e207c772c25a" [label=X]
+	"60b29955-566c-4237-b2ee-a18c3b5f6b51" -> "2ad36e8b-9710-485a-b876-e207c772c25a"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"c4a10e9c-c0f2-4248-ae71-9d49adfce0ae" [label=tau fillcolor=black style=filled]
-	"59da58d0-c58d-4b55-9502-024a71726cb0" -> "c4a10e9c-c0f2-4248-ae71-9d49adfce0ae"
+	"89b3b502-bf22-4618-ad2c-875612cec515" [label=tau fillcolor=black style=filled]
+	"2ad36e8b-9710-485a-b876-e207c772c25a" -> "89b3b502-bf22-4618-ad2c-875612cec515"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"023efda6-9326-4aa7-a423-862d595e6bfa" [label="*"]
-	"59da58d0-c58d-4b55-9502-024a71726cb0" -> "023efda6-9326-4aa7-a423-862d595e6bfa"
+	"d9430b8d-1472-4455-9834-7117a44e23a4" [label="*"]
+	"2ad36e8b-9710-485a-b876-e207c772c25a" -> "d9430b8d-1472-4455-9834-7117a44e23a4"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"97f7ff2e-da1e-4be5-bc0a-864a0de24a01" [label="Control Call"]
-	"023efda6-9326-4aa7-a423-862d595e6bfa" -> "97f7ff2e-da1e-4be5-bc0a-864a0de24a01"
+	"5aa2ede4-3d35-443a-845c-c297e5d52b13" [label="Control Call"]
+	"d9430b8d-1472-4455-9834-7117a44e23a4" -> "5aa2ede4-3d35-443a-845c-c297e5d52b13"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"e5ee862a-6748-4441-8c00-7f5a0fbc0276" [label=tau fillcolor=black style=filled]
-	"023efda6-9326-4aa7-a423-862d595e6bfa" -> "e5ee862a-6748-4441-8c00-7f5a0fbc0276"
+	"08b9ae5b-cfcf-43cf-9de7-a613db6b9243" [label=tau fillcolor=black style=filled]
+	"d9430b8d-1472-4455-9834-7117a44e23a4" -> "08b9ae5b-cfcf-43cf-9de7-a613db6b9243"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"2e197634-7d24-4e63-a0c7-666d2a666792" [label=X]
-	"6828bf77-44e2-463f-9e05-1efcbdab7313" -> "2e197634-7d24-4e63-a0c7-666d2a666792"
+	"d9f39ae5-2c48-4f96-b423-6f6a6c5907d5" [label=X]
+	"60b29955-566c-4237-b2ee-a18c3b5f6b51" -> "d9f39ae5-2c48-4f96-b423-6f6a6c5907d5"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"0969963a-1112-4160-90af-f3c0a8be7738" [label=tau fillcolor=black style=filled]
-	"2e197634-7d24-4e63-a0c7-666d2a666792" -> "0969963a-1112-4160-90af-f3c0a8be7738"
+	"80ff568c-7748-4dee-9338-a65b50f9f665" [label=tau fillcolor=black style=filled]
+	"d9f39ae5-2c48-4f96-b423-6f6a6c5907d5" -> "80ff568c-7748-4dee-9338-a65b50f9f665"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"7c2b947e-38e4-4355-b76b-ed5f411ba885" [label="Test III"]
-	"2e197634-7d24-4e63-a0c7-666d2a666792" -> "7c2b947e-38e4-4355-b76b-ed5f411ba885"
+	"bce29978-c7ac-409e-b80f-0c90c83e67e8" [label="Test III"]
+	"d9f39ae5-2c48-4f96-b423-6f6a6c5907d5" -> "bce29978-c7ac-409e-b80f-0c90c83e67e8"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"594b7811-5b98-4eb4-9cc0-7a541b3a7395" [label=X]
-	"6828bf77-44e2-463f-9e05-1efcbdab7313" -> "594b7811-5b98-4eb4-9cc0-7a541b3a7395"
+	"5d019e4a-e65f-49cf-b7b3-0f2c2cfa71c3" [label=X]
+	"60b29955-566c-4237-b2ee-a18c3b5f6b51" -> "5d019e4a-e65f-49cf-b7b3-0f2c2cfa71c3"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"164674d7-e471-43fa-8376-e15380574d8f" [label=tau fillcolor=black style=filled]
-	"594b7811-5b98-4eb4-9cc0-7a541b3a7395" -> "164674d7-e471-43fa-8376-e15380574d8f"
+	"fcb55c51-2bb8-4b42-b714-c84e8801a4b9" [label=tau fillcolor=black style=filled]
+	"5d019e4a-e65f-49cf-b7b3-0f2c2cfa71c3" -> "fcb55c51-2bb8-4b42-b714-c84e8801a4b9"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"0c398ac0-5467-464c-899d-475632474996" [label="Test III Decision"]
-	"594b7811-5b98-4eb4-9cc0-7a541b3a7395" -> "0c398ac0-5467-464c-899d-475632474996"
+	"8b489d7c-90de-492a-9154-561f57c7bb2b" [label="Test III Decision"]
+	"5d019e4a-e65f-49cf-b7b3-0f2c2cfa71c3" -> "8b489d7c-90de-492a-9154-561f57c7bb2b"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"b3371474-9cf5-4f57-a7bd-a8e1651f1213" [label=X]
-	"6828bf77-44e2-463f-9e05-1efcbdab7313" -> "b3371474-9cf5-4f57-a7bd-a8e1651f1213"
+	"598f663d-26bd-435a-9aca-b0532627508e" [label=X]
+	"60b29955-566c-4237-b2ee-a18c3b5f6b51" -> "598f663d-26bd-435a-9aca-b0532627508e"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"2a710c8a-84df-47a2-8657-9044378aba65" [label=tau fillcolor=black style=filled]
-	"b3371474-9cf5-4f57-a7bd-a8e1651f1213" -> "2a710c8a-84df-47a2-8657-9044378aba65"
+	"d4339c56-a69f-4c02-a80b-1b66318d82e6" [label=tau fillcolor=black style=filled]
+	"598f663d-26bd-435a-9aca-b0532627508e" -> "d4339c56-a69f-4c02-a80b-1b66318d82e6"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"805bced6-2403-45fd-9187-8b8951117efe" [label="Discharge Test"]
-	"b3371474-9cf5-4f57-a7bd-a8e1651f1213" -> "805bced6-2403-45fd-9187-8b8951117efe"
+	"9fa63c4b-b22f-4eca-a79a-ca2970a268f7" [label="Discharge Test"]
+	"598f663d-26bd-435a-9aca-b0532627508e" -> "9fa63c4b-b22f-4eca-a79a-ca2970a268f7"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"3c6592d6-fcd2-4c52-9331-eef8f33ed495" [label="Prescripe Special Medication"]
-	"b3371474-9cf5-4f57-a7bd-a8e1651f1213" -> "3c6592d6-fcd2-4c52-9331-eef8f33ed495"
+	"6fd28600-982d-42a5-bd16-3eaa10dbf6fb" [label="Prescripe Special Medication"]
+	"598f663d-26bd-435a-9aca-b0532627508e" -> "6fd28600-982d-42a5-bd16-3eaa10dbf6fb"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"05f67060-1e77-4df7-8bfd-3c8c754ef9b5" [label=X]
-	"6828bf77-44e2-463f-9e05-1efcbdab7313" -> "05f67060-1e77-4df7-8bfd-3c8c754ef9b5"
+	"51316225-eef7-4a66-a8ec-63fb6e4f71af" [label=X]
+	"60b29955-566c-4237-b2ee-a18c3b5f6b51" -> "51316225-eef7-4a66-a8ec-63fb6e4f71af"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"a0ee0b6b-98aa-44a5-8c01-f69cf7fb0e1c" [label=tau fillcolor=black style=filled]
-	"05f67060-1e77-4df7-8bfd-3c8c754ef9b5" -> "a0ee0b6b-98aa-44a5-8c01-f69cf7fb0e1c"
+	"876bf086-795f-4b84-bf7f-14ac34149e0f" [label=tau fillcolor=black style=filled]
+	"51316225-eef7-4a66-a8ec-63fb6e4f71af" -> "876bf086-795f-4b84-bf7f-14ac34149e0f"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"d67e5668-a473-4fcb-beaf-87b5013e68f8" [label="*"]
-	"05f67060-1e77-4df7-8bfd-3c8c754ef9b5" -> "d67e5668-a473-4fcb-beaf-87b5013e68f8"
+	"fae92dda-14f7-4344-9b80-61db19ee0f19" [label="*"]
+	"51316225-eef7-4a66-a8ec-63fb6e4f71af" -> "fae92dda-14f7-4344-9b80-61db19ee0f19"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"84e61097-c43f-49bf-80d6-dc525910bb35" [label="->"]
-	"d67e5668-a473-4fcb-beaf-87b5013e68f8" -> "84e61097-c43f-49bf-80d6-dc525910bb35"
+	"efd27575-241f-45ca-a322-b448aceec43f" [label="->"]
+	"fae92dda-14f7-4344-9b80-61db19ee0f19" -> "efd27575-241f-45ca-a322-b448aceec43f"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"d263de21-f313-47ed-9551-4da93654e21c" [label=X]
-	"84e61097-c43f-49bf-80d6-dc525910bb35" -> "d263de21-f313-47ed-9551-4da93654e21c"
+	"7e979dcc-fcca-4d9d-8702-711968f3fa6e" [label=X]
+	"efd27575-241f-45ca-a322-b448aceec43f" -> "7e979dcc-fcca-4d9d-8702-711968f3fa6e"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"88bebf64-ebb8-43dc-a6a7-a41c3e03ff5f" [label=tau fillcolor=black style=filled]
-	"d263de21-f313-47ed-9551-4da93654e21c" -> "88bebf64-ebb8-43dc-a6a7-a41c3e03ff5f"
+	"9bb6ebe7-a007-4587-a0a3-5ed174ba886b" [label=tau fillcolor=black style=filled]
+	"7e979dcc-fcca-4d9d-8702-711968f3fa6e" -> "9bb6ebe7-a007-4587-a0a3-5ed174ba886b"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"718d57c2-8b89-4901-a7bb-19c03e629e09" [label="*"]
-	"d263de21-f313-47ed-9551-4da93654e21c" -> "718d57c2-8b89-4901-a7bb-19c03e629e09"
+	"ab430fca-92d6-47ed-957f-c5122a3465d2" [label="*"]
+	"7e979dcc-fcca-4d9d-8702-711968f3fa6e" -> "ab430fca-92d6-47ed-957f-c5122a3465d2"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"95a9577f-8400-4aea-9af0-83d08f8ec21a" [label="->"]
-	"718d57c2-8b89-4901-a7bb-19c03e629e09" -> "95a9577f-8400-4aea-9af0-83d08f8ec21a"
+	"45faaa3e-449f-4f11-bfe8-ddf03c93aa29" [label="->"]
+	"ab430fca-92d6-47ed-957f-c5122a3465d2" -> "45faaa3e-449f-4f11-bfe8-ddf03c93aa29"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"5dd1caf7-5702-4fbb-a946-4b3a864979a2" [label=X]
-	"95a9577f-8400-4aea-9af0-83d08f8ec21a" -> "5dd1caf7-5702-4fbb-a946-4b3a864979a2"
+	"5fc96b9b-4fe4-44e1-978f-1faf6996c29c" [label=X]
+	"45faaa3e-449f-4f11-bfe8-ddf03c93aa29" -> "5fc96b9b-4fe4-44e1-978f-1faf6996c29c"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"dad4436b-e5a3-4488-bb3c-d622be9f7005" [label=tau fillcolor=black style=filled]
-	"5dd1caf7-5702-4fbb-a946-4b3a864979a2" -> "dad4436b-e5a3-4488-bb3c-d622be9f7005"
+	"f6f62106-1558-4f86-b257-7f4884d1c805" [label=tau fillcolor=black style=filled]
+	"5fc96b9b-4fe4-44e1-978f-1faf6996c29c" -> "f6f62106-1558-4f86-b257-7f4884d1c805"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"42db97ef-4b90-4b29-8035-218dba799ed5" [label="*"]
-	"5dd1caf7-5702-4fbb-a946-4b3a864979a2" -> "42db97ef-4b90-4b29-8035-218dba799ed5"
+	"14449df7-81b9-47b6-84e9-b77e3a6f0754" [label="*"]
+	"5fc96b9b-4fe4-44e1-978f-1faf6996c29c" -> "14449df7-81b9-47b6-84e9-b77e3a6f0754"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"654ed754-7588-473d-8e57-ad4c0d3c193d" [label=X]
-	"42db97ef-4b90-4b29-8035-218dba799ed5" -> "654ed754-7588-473d-8e57-ad4c0d3c193d"
+	"cafb5be3-9258-4eb9-9727-634ce70be9ec" [label=X]
+	"14449df7-81b9-47b6-84e9-b77e3a6f0754" -> "cafb5be3-9258-4eb9-9727-634ce70be9ec"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"12140e0c-2f6d-4275-8fe2-f0592c38f2fb" [label="Inform Authority Fill Form"]
-	"654ed754-7588-473d-8e57-ad4c0d3c193d" -> "12140e0c-2f6d-4275-8fe2-f0592c38f2fb"
+	"9f593b88-9e31-4683-8857-e245cbcdcd58" [label="Inform Authority Fill Form"]
+	"cafb5be3-9258-4eb9-9727-634ce70be9ec" -> "9f593b88-9e31-4683-8857-e245cbcdcd58"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"ec7268f4-3794-49dd-b76a-872ebad97374" [label="Treatment A2"]
-	"654ed754-7588-473d-8e57-ad4c0d3c193d" -> "ec7268f4-3794-49dd-b76a-872ebad97374"
+	"f175ad51-2c7b-4513-a7ba-4bdc5aa0f3db" [label="Treatment A2"]
+	"cafb5be3-9258-4eb9-9727-634ce70be9ec" -> "f175ad51-2c7b-4513-a7ba-4bdc5aa0f3db"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"bf0da486-c657-43d2-a580-e6a801ff331f" [label="Control Call (+)"]
-	"654ed754-7588-473d-8e57-ad4c0d3c193d" -> "bf0da486-c657-43d2-a580-e6a801ff331f"
+	"21dbf5e4-c777-4bdc-b23e-92f9d1b003f0" [label="Control Call (+)"]
+	"cafb5be3-9258-4eb9-9727-634ce70be9ec" -> "21dbf5e4-c777-4bdc-b23e-92f9d1b003f0"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"6228f439-d564-46b6-9f7f-f696116c0ae7" [label="Check Treatment A3"]
-	"654ed754-7588-473d-8e57-ad4c0d3c193d" -> "6228f439-d564-46b6-9f7f-f696116c0ae7"
+	"43f6a5ec-f055-4f74-b8bf-c24edf0ebce6" [label="Check Treatment A3"]
+	"cafb5be3-9258-4eb9-9727-634ce70be9ec" -> "43f6a5ec-f055-4f74-b8bf-c24edf0ebce6"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"3d26e457-de01-4779-800c-02f6b1b9d06a" [label="Treatment A3"]
-	"654ed754-7588-473d-8e57-ad4c0d3c193d" -> "3d26e457-de01-4779-800c-02f6b1b9d06a"
+	"2f4b7594-0d47-4a9f-99f0-d02cd82b6353" [label="Treatment A3"]
+	"cafb5be3-9258-4eb9-9727-634ce70be9ec" -> "2f4b7594-0d47-4a9f-99f0-d02cd82b6353"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"153cccc4-916b-4354-ba3c-f1b8f9b1ade6" [label=Referral]
-	"654ed754-7588-473d-8e57-ad4c0d3c193d" -> "153cccc4-916b-4354-ba3c-f1b8f9b1ade6"
+	"13008bcd-441a-4d1a-8dcc-263725061bcc" [label=Referral]
+	"cafb5be3-9258-4eb9-9727-634ce70be9ec" -> "13008bcd-441a-4d1a-8dcc-263725061bcc"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"09c05a69-eaa6-42f0-8386-a354ca68a85b" [label="Inform Authority Send Form"]
-	"654ed754-7588-473d-8e57-ad4c0d3c193d" -> "09c05a69-eaa6-42f0-8386-a354ca68a85b"
+	"5651038a-63e5-4be1-a7ae-52e3f36957e5" [label="Inform Authority Send Form"]
+	"cafb5be3-9258-4eb9-9727-634ce70be9ec" -> "5651038a-63e5-4be1-a7ae-52e3f36957e5"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"2e538355-2d5a-43d3-8b50-e2440296bcba" [label="Register Facility"]
-	"654ed754-7588-473d-8e57-ad4c0d3c193d" -> "2e538355-2d5a-43d3-8b50-e2440296bcba"
+	"2c932d9f-555a-4ae7-a7fa-5be38e55a8e0" [label="Register Facility"]
+	"cafb5be3-9258-4eb9-9727-634ce70be9ec" -> "2c932d9f-555a-4ae7-a7fa-5be38e55a8e0"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"d8e47ac1-d76b-4078-8685-875f9b4aff1a" [label=tau fillcolor=black style=filled]
-	"42db97ef-4b90-4b29-8035-218dba799ed5" -> "d8e47ac1-d76b-4078-8685-875f9b4aff1a"
+	"c6162edd-3ae4-4bce-a190-867ffda1b43d" [label=tau fillcolor=black style=filled]
+	"14449df7-81b9-47b6-84e9-b77e3a6f0754" -> "c6162edd-3ae4-4bce-a190-867ffda1b43d"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"48bfca0e-ba85-4119-935c-ddd3d495671d" [label=X]
-	"95a9577f-8400-4aea-9af0-83d08f8ec21a" -> "48bfca0e-ba85-4119-935c-ddd3d495671d"
+	"8dac4c84-8149-4ea8-bd4c-5b936eca8b0f" [label=X]
+	"45faaa3e-449f-4f11-bfe8-ddf03c93aa29" -> "8dac4c84-8149-4ea8-bd4c-5b936eca8b0f"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"f749c016-0505-41b3-94f4-746e4c713425" [label=tau fillcolor=black style=filled]
-	"48bfca0e-ba85-4119-935c-ddd3d495671d" -> "f749c016-0505-41b3-94f4-746e4c713425"
+	"20db78b8-4c42-4919-a181-dd26387db037" [label=tau fillcolor=black style=filled]
+	"8dac4c84-8149-4ea8-bd4c-5b936eca8b0f" -> "20db78b8-4c42-4919-a181-dd26387db037"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"abb9d2b7-0331-42b6-88e5-de3a42d3a61a" [label="Decide Treatment"]
-	"48bfca0e-ba85-4119-935c-ddd3d495671d" -> "abb9d2b7-0331-42b6-88e5-de3a42d3a61a"
+	"bf083678-a86d-4e19-97fd-4628c9bacb94" [label="Decide Treatment"]
+	"8dac4c84-8149-4ea8-bd4c-5b936eca8b0f" -> "bf083678-a86d-4e19-97fd-4628c9bacb94"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"208f1031-3c1e-4fb8-b7a6-8e80d13df570" [label=tau fillcolor=black style=filled]
-	"718d57c2-8b89-4901-a7bb-19c03e629e09" -> "208f1031-3c1e-4fb8-b7a6-8e80d13df570"
+	"dde8779b-8ded-46d6-a36d-06416346c681" [label=tau fillcolor=black style=filled]
+	"ab430fca-92d6-47ed-957f-c5122a3465d2" -> "dde8779b-8ded-46d6-a36d-06416346c681"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"b765a535-7a7b-4e06-b71a-055ffd8acb9f" [label=X]
-	"84e61097-c43f-49bf-80d6-dc525910bb35" -> "b765a535-7a7b-4e06-b71a-055ffd8acb9f"
+	"6d60515f-f018-457e-bffc-96239402dafc" [label=X]
+	"efd27575-241f-45ca-a322-b448aceec43f" -> "6d60515f-f018-457e-bffc-96239402dafc"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"b2b64b2c-0678-4643-ac44-fe27af4c76fd" [label=tau fillcolor=black style=filled]
-	"b765a535-7a7b-4e06-b71a-055ffd8acb9f" -> "b2b64b2c-0678-4643-ac44-fe27af4c76fd"
+	"2d4f9de4-630c-4654-bde2-60b4a775bfc1" [label=tau fillcolor=black style=filled]
+	"6d60515f-f018-457e-bffc-96239402dafc" -> "2d4f9de4-630c-4654-bde2-60b4a775bfc1"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"3bd35244-b69f-439d-8add-02de309e1ddb" [label=X]
-	"b765a535-7a7b-4e06-b71a-055ffd8acb9f" -> "3bd35244-b69f-439d-8add-02de309e1ddb"
+	"d1342644-f008-48d1-8495-8bd8974260fc" [label=X]
+	"6d60515f-f018-457e-bffc-96239402dafc" -> "d1342644-f008-48d1-8495-8bd8974260fc"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"ddf9148c-03f4-4e61-ba39-f3cf88b97c6e" [label="+"]
-	"3bd35244-b69f-439d-8add-02de309e1ddb" -> "ddf9148c-03f4-4e61-ba39-f3cf88b97c6e"
+	"05cb6609-4ba3-417b-9f29-46cfa4bf1daf" [label="+"]
+	"d1342644-f008-48d1-8495-8bd8974260fc" -> "05cb6609-4ba3-417b-9f29-46cfa4bf1daf"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"e2cacb56-59cf-4f69-8683-794af813d5e7" [label="*"]
-	"ddf9148c-03f4-4e61-ba39-f3cf88b97c6e" -> "e2cacb56-59cf-4f69-8683-794af813d5e7"
+	"96f627b4-12ed-409f-8f9e-29728f2b032b" [label="*"]
+	"05cb6609-4ba3-417b-9f29-46cfa4bf1daf" -> "96f627b4-12ed-409f-8f9e-29728f2b032b"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"7f3434f7-60bb-44be-a53a-65d5b5dfe727" [label="Treatment B"]
-	"e2cacb56-59cf-4f69-8683-794af813d5e7" -> "7f3434f7-60bb-44be-a53a-65d5b5dfe727"
+	"31c0907a-f442-4618-9492-205648ae7dc6" [label="Treatment B"]
+	"96f627b4-12ed-409f-8f9e-29728f2b032b" -> "31c0907a-f442-4618-9492-205648ae7dc6"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"21326131-4acb-441f-8049-d4351b8636ec" [label=tau fillcolor=black style=filled]
-	"e2cacb56-59cf-4f69-8683-794af813d5e7" -> "21326131-4acb-441f-8049-d4351b8636ec"
+	"8c0e1699-abbe-4c22-b248-b37dfb4bdcaa" [label=tau fillcolor=black style=filled]
+	"96f627b4-12ed-409f-8f9e-29728f2b032b" -> "8c0e1699-abbe-4c22-b248-b37dfb4bdcaa"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"a06d966c-8354-4a36-8ca2-f546d8dd02ff" [label="*"]
-	"ddf9148c-03f4-4e61-ba39-f3cf88b97c6e" -> "a06d966c-8354-4a36-8ca2-f546d8dd02ff"
+	"fa5c55fc-4a5f-44d4-a4f6-9736f5e1e4ca" [label="*"]
+	"05cb6609-4ba3-417b-9f29-46cfa4bf1daf" -> "fa5c55fc-4a5f-44d4-a4f6-9736f5e1e4ca"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"bdf66079-21c7-44bf-85a8-ebfb9283cc5b" [label="Check Treatment B"]
-	"a06d966c-8354-4a36-8ca2-f546d8dd02ff" -> "bdf66079-21c7-44bf-85a8-ebfb9283cc5b"
+	"6c689385-82d1-4d9a-8c81-e8d0accca40a" [label="Check Treatment B"]
+	"fa5c55fc-4a5f-44d4-a4f6-9736f5e1e4ca" -> "6c689385-82d1-4d9a-8c81-e8d0accca40a"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"243eb8ba-4778-4c44-9b3e-4dbd262268cb" [label=tau fillcolor=black style=filled]
-	"a06d966c-8354-4a36-8ca2-f546d8dd02ff" -> "243eb8ba-4778-4c44-9b3e-4dbd262268cb"
+	"64430944-479a-4fbe-9a9e-5de1825d6af9" [label=tau fillcolor=black style=filled]
+	"fa5c55fc-4a5f-44d4-a4f6-9736f5e1e4ca" -> "64430944-479a-4fbe-9a9e-5de1825d6af9"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"a7f283c5-81a1-4e53-8946-0e3a801da7f3" [label="+"]
-	"3bd35244-b69f-439d-8add-02de309e1ddb" -> "a7f283c5-81a1-4e53-8946-0e3a801da7f3"
+	"a4e86b9b-4da7-429e-a2fb-c78bf1493f44" [label="+"]
+	"d1342644-f008-48d1-8495-8bd8974260fc" -> "a4e86b9b-4da7-429e-a2fb-c78bf1493f44"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"7fed5bf4-042a-4d73-bf49-2a7966349375" [label="*"]
-	"a7f283c5-81a1-4e53-8946-0e3a801da7f3" -> "7fed5bf4-042a-4d73-bf49-2a7966349375"
+	"e0149de8-ffe3-4305-ba32-3076c88b445c" [label="*"]
+	"a4e86b9b-4da7-429e-a2fb-c78bf1493f44" -> "e0149de8-ffe3-4305-ba32-3076c88b445c"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"261e7a04-2df3-4b4d-a5d6-fa03a4685f9c" [label="Treatment A1"]
-	"7fed5bf4-042a-4d73-bf49-2a7966349375" -> "261e7a04-2df3-4b4d-a5d6-fa03a4685f9c"
+	"cda6ea8c-969a-429a-822a-153249edac22" [label="Treatment A1"]
+	"e0149de8-ffe3-4305-ba32-3076c88b445c" -> "cda6ea8c-969a-429a-822a-153249edac22"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"490cb440-0ac5-4eb1-ad09-147633cbcc2c" [label=tau fillcolor=black style=filled]
-	"7fed5bf4-042a-4d73-bf49-2a7966349375" -> "490cb440-0ac5-4eb1-ad09-147633cbcc2c"
+	"d964a352-9582-4f6a-872a-d25ad0eeefb1" [label=tau fillcolor=black style=filled]
+	"e0149de8-ffe3-4305-ba32-3076c88b445c" -> "d964a352-9582-4f6a-872a-d25ad0eeefb1"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"15fbaf2b-fd95-408f-b34a-8a23f59960ef" [label="Check Treatment A2"]
-	"a7f283c5-81a1-4e53-8946-0e3a801da7f3" -> "15fbaf2b-fd95-408f-b34a-8a23f59960ef"
+	"94f6e744-b687-4908-bc61-c3540a412c52" [label="Check Treatment A2"]
+	"a4e86b9b-4da7-429e-a2fb-c78bf1493f44" -> "94f6e744-b687-4908-bc61-c3540a412c52"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"206a7107-2d50-4657-9ae9-4007baac79b4" [label="*"]
-	"a7f283c5-81a1-4e53-8946-0e3a801da7f3" -> "206a7107-2d50-4657-9ae9-4007baac79b4"
+	"e4cf0391-a430-4da8-b4ee-f9a3d585b3d6" [label="*"]
+	"a4e86b9b-4da7-429e-a2fb-c78bf1493f44" -> "e4cf0391-a430-4da8-b4ee-f9a3d585b3d6"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"866d0796-e6ea-478a-9e38-b41ac6a4f1f1" [label="Check Treatment A1"]
-	"206a7107-2d50-4657-9ae9-4007baac79b4" -> "866d0796-e6ea-478a-9e38-b41ac6a4f1f1"
+	"df8c0788-e1d1-42d2-9da4-83a1a472cfe5" [label="Check Treatment A1"]
+	"e4cf0391-a430-4da8-b4ee-f9a3d585b3d6" -> "df8c0788-e1d1-42d2-9da4-83a1a472cfe5"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"2dea831e-556f-4c6d-a03f-349663f73071" [label=tau fillcolor=black style=filled]
-	"206a7107-2d50-4657-9ae9-4007baac79b4" -> "2dea831e-556f-4c6d-a03f-349663f73071"
+	"c2a65a76-a972-41b4-9244-c0949692dad2" [label=tau fillcolor=black style=filled]
+	"e4cf0391-a430-4da8-b4ee-f9a3d585b3d6" -> "c2a65a76-a972-41b4-9244-c0949692dad2"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"6a784298-bb6b-44fc-a11a-7ebc6b89608e" [label=tau fillcolor=black style=filled]
-	"d67e5668-a473-4fcb-beaf-87b5013e68f8" -> "6a784298-bb6b-44fc-a11a-7ebc6b89608e"
+	"97fbeea8-4805-4c59-bf0d-305b0cdbbb5f" [label=tau fillcolor=black style=filled]
+	"fae92dda-14f7-4344-9b80-61db19ee0f19" -> "97fbeea8-4805-4c59-bf0d-305b0cdbbb5f"
 	node [fixedsize=true fontsize=14 shape=circle width=1]
-	"26984039-0855-434d-b677-b2eaf9a25d66" [label=X]
-	"6828bf77-44e2-463f-9e05-1efcbdab7313" -> "26984039-0855-434d-b677-b2eaf9a25d66"
+	"32f2c480-ff31-4e91-83b9-ef0fe597d016" [label=X]
+	"60b29955-566c-4237-b2ee-a18c3b5f6b51" -> "32f2c480-ff31-4e91-83b9-ef0fe597d016"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"029e0af0-360d-4a21-88d1-533d88a1eec4" [label=tau fillcolor=black style=filled]
-	"26984039-0855-434d-b677-b2eaf9a25d66" -> "029e0af0-360d-4a21-88d1-533d88a1eec4"
+	"205d0575-535b-4f05-8094-38b342a13411" [label=tau fillcolor=black style=filled]
+	"32f2c480-ff31-4e91-83b9-ef0fe597d016" -> "205d0575-535b-4f05-8094-38b342a13411"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"d995814f-3a95-49b6-87b3-575d6ed0db0a" [label=Discharge]
-	"26984039-0855-434d-b677-b2eaf9a25d66" -> "d995814f-3a95-49b6-87b3-575d6ed0db0a"
+	"db3bab81-3062-40ef-ad65-7fe539163622" [label=Discharge]
+	"32f2c480-ff31-4e91-83b9-ef0fe597d016" -> "db3bab81-3062-40ef-ad65-7fe539163622"
 	node [fixedsize=true fontsize=8 shape=box width=2.5]
-	"a41fb647-e10c-4f1e-a19d-1f945b2ecf1a" [label="Emergency Send 2 Facility (Wait)"]
-	"26984039-0855-434d-b677-b2eaf9a25d66" -> "a41fb647-e10c-4f1e-a19d-1f945b2ecf1a"
+	"17796344-6c11-4065-855d-a822f47f3085" [label="Emergency Send 2 Facility (Wait)"]
+	"32f2c480-ff31-4e91-83b9-ef0fe597d016" -> "17796344-6c11-4065-855d-a822f47f3085"
 	overlap=false
 	fontsize=11
 }
