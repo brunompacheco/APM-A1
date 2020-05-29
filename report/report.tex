@@ -284,8 +284,69 @@ For the organizational structure this again suggests the supervisor role for the
 Motivated by these assumptions, we investigated further the data and the relation between the components and the process. We concluded that indeed the components B, C and D perform similar activities: they act on the treatment-related activities. The loose resource is the helicopter, which only acts on the emergency activity. Component A performs the remaining activities: initial trial of the patients, exams, tests, discharge, etc.
 
 \section{Q3. Performance Analysis}
+
+Given the limitations of the provided data, the performance analysis will focus on \emph{lead time} and \emph{service time}.
+
 \paragraph{a)} 
+
+To grasp an intuition about the cost of each activity we start our exploration of the process performance by evaluating the performance of single activities. The distribution of the duration of each activity can be seen in Figure \ref{fig:figures-q3_a_activities_st-png}. We observed that the most time consuming activity is \emph{Prescripe Special Medication}. Also, \emph{Test III} has the second largest average duration. Administrative tasks like registration activities also show a long duration, while examination decisions and treatment checks have the shortest duration. In general we see that the activities related to treatments have long durations, \emph{Treatment A2} having the largest average duration of those. But knowing that this activities are performed many times in a single process, it is useful to evaluate their summed duration, as in Figure \ref{fig:figures-q3_a_activities_st_summed-png}. Analysing this last factor we also noticed that the \emph{Control Call} activity is the one with the highest impact in the process service time.
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+	\includegraphics[width=\textwidth]{figures/q3_a_activities_st.png}
+        \caption{Average duration}
+        \label{fig:figures-q3_a_activities_st-png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+	\includegraphics[width=\textwidth]{figures/q3_a_activities_st_summed.png}
+        \caption{Average summed duration in a trace of treatment activities}
+        \label{fig:figures-q3_a_activities_st_summed-png}
+    \end{subfigure}
+    \hfill
+    \caption{Average duration of the activities in the log}
+    \label{fig:special-medication-model}
+\end{figure}
+
+All of the standard deviations are small considering the overall duration of the activities, this means that there is not much variation in the time that is required for a specific activity in between cases. We also notice that there is no presence of anomalies in the distributions, all of them seem very close to a normal distribution.
+
+To understand better the relation between the activities and the total service time of the process, we generate the visualization in Figure \ref{fig:figures-q3_a_activities_total_st-png}. Comparing the activities with the total process duration in which they are present, we see that the Treatments A1, A2 and A3 correlate to much longer processes.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/q3_a_activities_total_st.png}
+    \caption{Activities relation to trace total service time}
+    \label{fig:figures-q3_a_activities_total_st-png}
+\end{figure}
+
+We can also notice through this visualization that the traces can be divided in two time-length groups. Through further investigation we notice this is true to both service time and lead time.
+
 \paragraph{b)}
+
+We can search for the causes of this group of traces with lower performance by seeing the data as a classification problem being the features the presence of the activities. This way, the most influential features can be seen as the main causes. A limited decision tree was used to identify the most influential features, and the resulting model can be seen through Figure \ref{fig:figure-q3_decision_tree-png}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/q3_decision_tree.png}
+    \caption{Decision tree trained on the classification of the two groups of traces with different performances}
+    \label{fig:figure-q3_decision_tree-png}
+\end{figure}
+
+We can see that the major cause for the long lead time of the traces is the happening of `Inform Authority Send Form`, which means that the patient will be forwarded to treatment, therefore taking longer time under observation.
+
+In the pursuit of further bottlenecks, we investigate also the relation of the performance with the age of the patients and their insurance plan, but no significant conclusions were possible. Still, based on the findings from the social networks, we analyse the influence of the components in the performance, as can be seen in Figure \ref{fig:figures-q3_b_components_st-png}. Investigating further this, we identify that the component C performs more tasks than the other components for each related process, having an average of 31 activities per process (in which it actuates).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/q3_b_components_st.png}
+    \caption{Components total service time}
+    \label{fig:figures-q3_b_components_st-png}
+\end{figure}
+
+Recalling from the previous analysis that the control calls were very demanding, we investigate its relation to the process total duration and conclude that they account for a great part even in the traces that take longer lead times.
 
 \section{Q4. Decision Points}
 
