@@ -98,7 +98,7 @@ After distinguishing the two instances of the \emph{Control Call} activity in th
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{figures/q1_b_tree.pdf}
+    \includegraphics[width=0.8\textwidth]{figures/q1_b_tree.pdf}
     \caption{Process Tree after \emph{Control Call} splitting}
     \label{fig:figures-q1_b_tree-pdf}
 \end{figure}
@@ -168,49 +168,11 @@ Removing these activities we get the model seen in Figure \ref{fig:dfg-pt-no-A}.
     \label{fig:dfg-pt-no-A}
 \end{figure}
 
-A side effect of removing theses traces is that the \emph{Prescripe Special Medication} activity vanished, so we removed just the activities, keeping the traces, which had the precise effect of bringing the mentioned activity back to the model, as can be seen in Figure \ref{fig:dfg-pt-silent-A}.
+A side effect of removing theses traces is that the \emph{Prescripe Special Medication} activity vanished, so we removed just the activities, keeping the traces, which had the precise effect of bringing the mentioned activity back to the model. A representation of this resulting model can be seen in Figure \ref{fig:dfg-pt-silent-A} in the appendix.
 
-\begin{figure}[h]
-    \centering
-    \begin{subfigure}[b]{0.2\textwidth}
-        \centering
-	\includegraphics[width=\textwidth]{figures/q1_d_silent_A.pdf}
-        \caption{DFG}
-        \label{fig:figures-q1_d_silent_A-pdf}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.7\textwidth}
-        \centering
-	\includegraphics[width=\textwidth]{figures/q1_d_tree_silent_A.pdf}
-        \caption{Process Tree}
-        \label{fig:figures-q1_d_tree_silent_A-pdf}
-    \end{subfigure}
-    \hfill
-    \caption{Model resulting after the filtering of just the activities related to the A treatments}
-    \label{fig:dfg-pt-silent-A}
-\end{figure}
 
-The fine tuning of the threshold resulted in the model that can be seen in Figure \ref{fig:noise-threshold-tuning-model}. This approach resulted in a model that represents more behaviors of the event log. The major outcome in the model would be the exclusive choice operator after the \emph{Decide Treatment} activity that distinguished between the treatments.
+The fine tuning of the threshold resulted in the model that can be seen in Figure \ref{fig:noise-threshold-tuning-model} in the appendix. This approach resulted in a model that represents more behaviors of the event log. The major outcome in the model would be the exclusive choice operator after the \emph{Decide Treatment} activity that distinguished between the treatments.
 
-\begin{figure}[h]
-    \centering
-    \begin{subfigure}[b]{0.2\textwidth}
-        \centering
-	\includegraphics[width=\textwidth]{figures/q1_d_dfg_noise_threshold_tuning.pdf}
-        \caption{DFG}
-        \label{fig:figures-q1_d_dfg_noise_threshold_tuning-pdf}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.7\textwidth}
-        \centering
-	\includegraphics[width=\textwidth]{figures/q1_d_noise_threshold_tuning.pdf}
-        \caption{Process Tree}
-        \label{fig:q1_d_noise_threshold_tuninig-pdf}
-    \end{subfigure}
-    \hfill
-    \caption{Model resulting from the tuning of the noise threshold}
-    \label{fig:noise-threshold-tuning-model}
-\end{figure}
 
 \paragraph{e)} 
 
@@ -411,7 +373,49 @@ Still about the performance, we identified that the component C seems to be eith
 \paragraph{Q4)} 
 
 \newpage
-\section{Appendix}
+    
+\section*{Appendix}
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.2\textwidth}
+        \centering
+	\includegraphics[width=\textwidth]{figures/q1_d_silent_A.pdf}
+        \caption{DFG}
+        \label{fig:figures-q1_d_silent_A-pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.7\textwidth}
+        \centering
+	\includegraphics[width=\textwidth]{figures/q1_d_tree_silent_A.pdf}
+        \caption{Process Tree}
+        \label{fig:figures-q1_d_tree_silent_A-pdf}
+    \end{subfigure}
+    \hfill
+    \caption{Model resulting after the filtering of just the activities related to the A treatments}
+    \label{fig:dfg-pt-silent-A}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.2\textwidth}
+        \centering
+	\includegraphics[width=\textwidth]{figures/q1_d_dfg_noise_threshold_tuning.pdf}
+        \caption{DFG}
+        \label{fig:figures-q1_d_dfg_noise_threshold_tuning-pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.7\textwidth}
+        \centering
+	\includegraphics[width=\textwidth]{figures/q1_d_noise_threshold_tuning.pdf}
+        \caption{Process Tree}
+        \label{fig:q1_d_noise_threshold_tuninig-pdf}
+    \end{subfigure}
+    \hfill
+    \caption{Model resulting from the tuning of the noise threshold}
+    \label{fig:noise-threshold-tuning-model}
+\end{figure}
 
 \end{document}
 
