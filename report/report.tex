@@ -58,7 +58,7 @@
     \begin{flushright} \large
 			\emph{Submitted By:} \\
       Student 1 (Matr. Number) \\
-      Student 2 (Matr. Number)  \\
+      Bruno Machado Pacheco (403532)  \\
       Tom-Hendrik Hülsmann (355773)
 		\end{flushright}
 	\end{minipage}\\[2 cm]
@@ -68,14 +68,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewcommand{\thesection}{\arabic{section}}
-General notes:
-\begin{itemize}
-  \item Remove this general note page and the text in \textlangle \textrangle
-  \item This report should be at most 20 A4 pages, including the title page 
-  \item	Data supporting your claims should be presented in a suitable and comprehensible aggregated form (diagrams, pictures, charts) and not as raw data tables (they can be added in the appendix)
-  \item Submit this report as a PDF file
-\end{itemize}
-\newpage
 
 \section{Q1. Inductive Miner}
 
@@ -267,14 +259,13 @@ The results of the HM application can be seen in Figure \ref{fig:figures-q1_f_he
 For these, we can conclude that the Inductive Miner presented the best model out of the 3 algorithms tried.
 
 \section{Q2. Social Network Analysis}
-\textlangle Optional: Introduction \textrangle
 \paragraph{a)} 
 
 A handover-of-work network connects two resources when an activity performed by one resource directly follows the activity performed by another resource. The more frequent this relationship is in the log, the higher is the weight of an edge. In the Figure \ref{fig:figures-q2_handover-png} below the handover-of-work network that was discovered from the given log can be seen.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\textwidth]{figures/q2_handover.png}
+    \includegraphics[width=0.5\textwidth]{figures/q2_handover.png}
     \caption{Handover-of-work network discovered through PM4Py}
     \label{fig:figures-q2_handover-png}
 \end{figure}
@@ -291,7 +282,7 @@ The obtained network that can be seen in Figure \ref{fig:figures-q2_subcontracti
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\textwidth]{figures/q2_subcontracting.png}
+    \includegraphics[width=0.5\textwidth]{figures/q2_subcontracting.png}
     \caption{Subcontracting network discovered through PM4Py}
     \label{fig:figures-q2_subcontracting-png}
 \end{figure}
@@ -304,7 +295,7 @@ A working-together network depicts which resources are often working together on
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\textwidth]{figures/q2_working_together.png}
+    \includegraphics[width=0.5\textwidth]{figures/q2_working_together.png}
     \caption{Working-together network generated through PM4Py}
     \label{fig:figures-q2_working_together-png}
 \end{figure}
@@ -319,7 +310,7 @@ A joint-activity network depicts how similar the types of activities are that th
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\textwidth]{figures/q2_jointactivities.png}
+    \includegraphics[width=0.5\textwidth]{figures/q2_jointactivities.png}
     \caption{Join-activities network generated through PM4Py}
     \label{fig:figures-q2_jointactivities-png}
 \end{figure}
@@ -346,7 +337,7 @@ After preprocessing the event log we can now create a decision tree based on it.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{figures/q4_tree_all.png}
+    \includegraphics[width=0.5\textwidth]{figures/q4_tree_all.pdf}
     \caption{Decision tree based on all log attributes.}
     \label{fig:figures-q4-tree-all-png}
 \end{figure}
@@ -354,11 +345,11 @@ After preprocessing the event log we can now create a decision tree based on it.
 The obtained tree can be seen in \ref{fig:figures-q4-tree-all-png}, it is able to perfectly classify all cases, which is unexpected. A closer investigation shows that the tree simply uses the target events themselves to classify the cases, which of course is not wanted. As many of the events are always performed by the same or similar resources, this also holds true for the resource attribute. The two attributes are therefore not suited to be included in a sensible decision tree for this task.
 Furthermore we see that the tree once splits using the duration of an event. Since the tree holds no information about which event is related to this duration, we cannot derive meaningful results from this split. The attribute is therefore removed as well. With the remaining age and insurance attributes, we create a new decision tree in the following.
 
-Since the Discharge Init Exam event is disproportionally more frequent than all other classes, for this tree we needed to introduce some normalization in order to obtain a sensible tree (Else all nodes would have the same label for a small tree). Additionally, since the tree is not able to perfectly classify all cases anymore, we have to limit the depth and maximum number of child nodes in order to obtain readable results. The depth was capped at 7 and the maximum number of leaf nodes at 8.
+Since the \emph{Discharge Init Exam} event is disproportionally more frequent than all other classes, for this tree we needed to introduce some normalization in order to obtain a sensible tree (Else all nodes would have the same label for a small tree). Additionally, since the tree is not able to perfectly classify all cases anymore, we have to limit the depth and maximum number of child nodes in order to obtain readable results. The depth was capped at 7 and the maximum number of leaf nodes at 8.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\textwidth]{figures/q4_tree_min.png}
+    \includegraphics[width=0.9\textwidth]{figures/q4_tree_min.pdf}
     \caption{Decision tree based on the remaining log attributes.}
     \label{fig:figures-q4-tree-min-png}
 \end{figure}
@@ -371,27 +362,13 @@ In general we can observe that privately insured patients receive any kind of tr
 Based on our analysis in Q2, we know that the resources are heavily related to the facilities. More concrete the first letter of the name of the resource corresponds to the facility of the resource. We will therefore use this property for the distinction between the different facilities.
 For this we first create a new property called \emph{facility} that is derived from the first letter of the resource of the event. The unique facilities of the complete log are \texttt{A}, \texttt{B}, \texttt{C}, \texttt{D}, \texttt{I} and \texttt{H}. Based on this we add a new column that documents the move of a patient between two facilities. This is done by shifting the \emph{facility} column down by one. For further implementation details see the documentation. An excerpt of the resulting log can be seen in figure \ref{fig:figures-q4-fac-move-png}.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{figures/q4_fac_move.png}
-    \caption{The event data after the transformation.}
-    \label{fig:figures-q4-fac-move-png}
-\end{figure}
-
 Each event now contains the information about the facility move that has happened. For the calculation of these moves the start time of the events is used. That means we assume that the move between facilities happens at the start time of the current event. We can now use this move record to calculate how many patients currently are assigned to a certain facility for every event. We do this by going through the log chronologically and de- or increasing the patient count depending on the facility move that happened. Additionally we have assigned an initial patient count to all of the facilities. This was done because the given dataset is presumably not complete and the facilities have also operated in the time that is not captured by the dataset. A fitting initial value for the facilities was chosen based on the mean value of patients from a previous run of the algorithm and a visual interpretation of the patient counts, of which an excerpt can be seen in \ref{fig:figures-q4-fac-count-png}. We can see that there is some kind of weekly recurring pattern in the patient count of both facilities and that the patient count in facility \texttt{A} steadily rises up until the end.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{figures/q4_fac_count.png}
-    \caption{The estimated patient count at the facilities \texttt{A} and \texttt{I}.}
-    \label{fig:figures-q4-fac-count-png}
-\end{figure}
 
 The estimated patient counts at the facilities were joined with the original event log again and transformed into the PM4Py event log representation. Based on that, a decision tree was created as discussed in a). The only attributes that were used were the newly created patient counts. We again applied a normalization and restricted the depth of the tree to 8, while setting the maximum number of leaf nodes to 8. The resulting decision tree can be seen in \ref{fig:figures-q4-facility-tree-png}.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{figures/q4_facility_tree.png}
+    \includegraphics[width=\textwidth]{figures/q4_facility_tree.pdf}
     \caption{The decision tree based on the patient count on the different facilities.}
     \label{fig:figures-q4-facility-tree-png}
 \end{figure}
@@ -407,19 +384,33 @@ Facility I is a good indicator for the overall number of "active" patients that 
 In a last step we calculated the number of resources in each facility to compare those numbers with the obtained patient numbers. We see that, although facility \texttt{A} has the highest patient load, it has the lowest number of resources (7) compared to the other "normal" facilities \texttt{B} (18), \texttt{C} (17) and \texttt{D} (17). This is a further indicator that facility \texttt{A} might be understaffed. We also see that there is only one resource in facility \texttt{I}, we have already observed this fact in Q2. This is probably the case as the control calls are somehow automated and performed by a single system, so there can be no resource bottlenecks here.
 
 \section{Q5. Proccess Improve Suggestions}
-\textlangle Optional: Introduction \textrangle \\
 
-\paragraph{Q1)} 
-- reduce noise in the logging process
+As was noticed from the very first analysis, the data has some imperfections. This challenged the modelling of the process and limited our analysis. For this, our first suggestion is towards an improvement in the recording of the activities. This could allow for a deeper understanding of the process and increase the possibility of identifying opportunities in it.
 
-\paragraph{Q2)} 
+When analysing the structure of the resources, we identified the groups of resources that are responsible for the activities. This way it is possible to drive investments towards the resource groups that are more impacting in the problem activities. Unfortunately it is not possible to analyse how is the resources pool impacting the performance of the process, as no sufficient information was provided. Regarding the general structure of the organization, we have found that facility \texttt{A} acts as a connector between all of the other facilities. This means that some activities in other facilities may be blocked until an action from facility \texttt{A}. The facility therefore plays a core role in the whole process. This means there is a single weak point, if facility \texttt{A} is ever overloaded or there are vacancies, for example through sick resources the performance of the whole process could be heavily impacted. We therefore suggest to make adjustments to the organizational structure of the process in such a way, that less facilities are dependent on a single other facility. This could be done by introducing a new facility that takes over work from facility \texttt{A}, or by allowing more direct connections between the facilities. Another observation is, that there is a large amount of subcontracting happening in the facilities. The frequent handover of patients from one resource to another is not efficient and might cause delays. To improve this aspect, we propose to streamline processes in such a way, that it is possible for one resource to handle more consecutive steps, therefore requiring less handover.
 
-\paragraph{Q3)} 
+Regarding the performance of the process, the activities with the biggest impact were the control calls. Assuming that these activities are performed while the patients wait for the tests or for the treatments to begin, we can infer that these waiting lines are the most influential factors for the process poor performance. Therefore, we suggest the investment in speeding up the application of the test and the beginning of the treatments, for example through more resources or faster testing procedures. Furthermore, we identified that the component C seems to be either underperforming or overloaded, as it is executing longer processes. Thus, further investigation on this group is recommended.
 
-\paragraph{Q4)} 
+As previously mentioned, facility \texttt{A} plays an important role in the process. Excluding facility \texttt{I}, it handles the most patients over the whole observed timeframe. Nevertheless we have found during our investigation, that it has the least resources available. At the same time we see that other facilities are often not handling a large number of patients, even tough there are more available resources. We therefore propose, if possible, to move resources from the facilities \texttt{B}, \texttt{C} and \texttt{D} to facility \texttt{A} to improve the resource situation.
 
 \newpage
 \section{Appendix}
+
+\textbf{Q4}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/q4_fac_count.png}
+    \caption{The estimated patient count at the facilities \texttt{A} and \texttt{I}.}
+    \label{fig:figures-q4-fac-count-png}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/q4_fac_move.png}
+    \caption{The event data after the transformation.}
+    \label{fig:figures-q4-fac-move-png}
+\end{figure}
 
 \end{document}
 
