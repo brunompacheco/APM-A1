@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label=<trace:Age &le; 63.5<br/>gini = 0.752<br/>samples = 1457<br/>value = [258.6, 55.0, 216.0, 343.5, 136.0]<br/>class = Discharge Init Exam>, fillcolor="#e9e9fc"] ;
+1 [label=<trace:Insurance@PRIV &le; 0.5<br/>gini = 0.754<br/>samples = 1126<br/>value = [186.6, 43.0, 179.0, 268.0, 114.0]<br/>class = Discharge Init Exam>, fillcolor="#e5e4fb"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+5 [label=<trace:Age &le; 39.5<br/>gini = 0.753<br/>samples = 772<br/>value = [120.6, 25.0, 125.0, 188.5, 88.0]<br/>class = Discharge Init Exam>, fillcolor="#e2e1fb"] ;
+1 -> 5 ;
+11 [label=<trace:Age &le; 15.5<br/>gini = 0.762<br/>samples = 402<br/>value = [69.6, 18.0, 56.0, 94.0, 48.0]<br/>class = Discharge Init Exam>, fillcolor="#e9e9fc"] ;
+5 -> 11 ;
+13 [label=<gini = 0.75<br/>samples = 61<br/>value = [7.8, 3.0, 15.0, 13.5, 6.0]<br/>class = Discharge Test>, fillcolor="#f6fefc"] ;
+11 -> 13 ;
+14 [label=<gini = 0.758<br/>samples = 341<br/>value = [61.8, 15.0, 41.0, 80.5, 42.0]<br/>class = Discharge Init Exam>, fillcolor="#ebeafc"] ;
+11 -> 14 ;
+12 [label=<gini = 0.738<br/>samples = 370<br/>value = [51.0, 7.0, 69.0, 94.5, 40.0]<br/>class = Discharge Init Exam>, fillcolor="#e5e5fc"] ;
+5 -> 12 ;
+6 [label=<trace:Age &le; 61.5<br/>gini = 0.754<br/>samples = 354<br/>value = [66.0, 18.0, 54.0, 79.5, 26.0]<br/>class = Discharge Init Exam>, fillcolor="#f0f0fd"] ;
+1 -> 6 ;
+7 [label=<gini = 0.747<br/>samples = 342<br/>value = [63.0, 16.0, 54.0, 78.0, 22.0]<br/>class = Discharge Init Exam>, fillcolor="#eeeefd"] ;
+6 -> 7 ;
+8 [label=<trace:Age &le; 62.5<br/>gini = 0.717<br/>samples = 12<br/>value = [3.0, 2.0, 0.0, 1.5, 4.0]<br/>class = Treatment A2>, fillcolor="#fce5f7"] ;
+6 -> 8 ;
+9 [label=<gini = 0.446<br/>samples = 5<br/>value = [0.6, 0.0, 0.0, 1.0, 4.0]<br/>class = Treatment A2>, fillcolor="#ee7ed6"] ;
+8 -> 9 ;
+10 [label=<gini = 0.583<br/>samples = 7<br/>value = [2.4, 2.0, 0.0, 0.5, 0.0]<br/>class = Treatment B>, fillcolor="#fbeee4"] ;
+8 -> 10 ;
+2 [label=<trace:Insurance@PRIV &le; 0.5<br/>gini = 0.73<br/>samples = 331<br/>value = [72.0, 12.0, 37.0, 75.5, 22.0]<br/>class = Discharge Init Exam>, fillcolor="#fafafe"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label=<gini = 0.72<br/>samples = 231<br/>value = [45.6, 8.0, 27.0, 57.0, 12.0]<br/>class = Discharge Init Exam>, fillcolor="#eae9fc"] ;
+2 -> 3 ;
+4 [label=<gini = 0.736<br/>samples = 100<br/>value = [26.4, 4.0, 10.0, 18.5, 10.0]<br/>class = Treatment B>, fillcolor="#fbebe0"] ;
+2 -> 4 ;
+}
