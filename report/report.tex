@@ -267,10 +267,67 @@ For these, we can conclude that the Inductive Miner presented the best model out
 
 \section{Q2. Social Network Analysis}
 \textlangle Optional: Introduction \textrangle
-\paragraph{a)} \textlangle Provide the answer here\textrangle
-\paragraph{b)} \textlangle Provide the answer here\textrangle
-\paragraph{c)} \textlangle Provide the answer here\textrangle
-\paragraph{d)} \textlangle Provide the answer here\textrangle
+\paragraph{a)} 
+
+A handover-of-work network connects two resources when an activity performed by one resource directly follows the activity performed by another resource. The more frequent this relationship is in the log, the higher is the weight of an edge. In the Figure \ref{fig:figures-q2_handover-png} below the handover-of-work network that was discovered from the given log can be seen.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/q2_handover.png}
+    \caption{Handover-of-work network discovered through PM4Py}
+    \label{fig:figures-q2_handover-png}
+\end{figure}
+
+We see that the network consists of four strongly connected main components and a single resource that has only one connection. Further we see that the resources in each of the strongly connected components all have a common first letter. The outer three components contain resources with first letters B, C and D. The inner component consists of resources with the first letter A. Throughout the rest of this report these components will be referred to by these letters. The nodes in the three outer components are connected only to themselves and the inner A component, but not to the other outer components. Most of the nodes in the A component have connections to all other components and the nodes in the A component have overall the most connections to other nodes. There is a single resource that does not belong to any of the components and has only one incoming edge.
+
+From an organizational perspective the observed network might be explained in the following way: The outer components B, C, D all represent certain distinct departments. All of the resources in such a department do similar work and its members are working together on a certain part of the process. The central A component, however, consists of resources that are delegating and inspecting work. They pass process instances from one department to another. Since the singular resource has only incoming edges, it must be concerned with the end of the process. It might be a kind of supervisor role that makes a final assertion of a process before it ends. However this node is not involved in most cases, as its connection is rather weak.
+
+\paragraph{b)} 
+
+A subcontracting social network visualizes what resources are involved in the work of another resource.
+
+The obtained network that can be seen in Figure \ref{fig:figures-q2_subcontracting-png} has a kind of forest structure. We again see distinct connected components that show the same A, B, C, D division as in the handover-of-work network discussed above. There is one component for each of these, except for the A component, which now consists of two not connected components. As a common structure we can observe a kind of star pattern for many nodes, meaning that one resource is involved in the work of many other resources. We can see that one of the A components has a very strong relation between two of the resources.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/q2_subcontracting.png}
+    \caption{Subcontracting network discovered through PM4Py}
+    \label{fig:figures-q2_subcontracting-png}
+\end{figure}
+
+From an organizational perspective we can again see that the work of one department never involves the work of another department. Subcontracting only happens within the A, B, C, and D departments. The star structures suggest that there are supervisor roles, resources that often subcontract work to other resources which do not subcontract any work. The strong connection between the \emph{Alexander} and \emph{Ava} resources suggests that the first is in a leadership position and the second might be a related secretary, as most of the work is subcontracted.
+
+\paragraph{c)} 
+
+A working-together network depicts which resources are often working together on the same case, so in which fraction of cases they were both involved. The generated network can be seen in Figure \ref{fig:figures-q2_working_together-png}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/q2_working_together.png}
+    \caption{Working-together network generated through PM4Py}
+    \label{fig:figures-q2_working_together-png}
+\end{figure}
+
+We see a similar structure as in the handover-of-work network, which is expected from our previous assumptions. We again have four main components, with three outer ones and an inner one, following the recurring A, B, C, D pattern. We see that the connections in this network are even stronger than in the handover of work network. All of the components are almost fully connected. The inner A component is most strongly connected. Again the outer components have no connections to the other outer connections, but are all connected to the inner component. The singular resource is again present and is only connected to resources in the A component.
+
+From an organizational point of view, we see that the resources in the A component are the most important ones. They are involved in almost all cases and are almost always working together. Again it seems that they delegate work to the outer components. The almost full connection of the components suggests that when a department is involved in a case at all, usually the whole department is involved and not only certain resources. From the subcontracting network we have seen that in the outer components much of the work is subcontracted, which explains the involvement of many different resources of each component we can see in the working-together network.
+
+\paragraph{d)} 
+
+A joint-activity network depicts how similar the types of activities are that the resources perform. In this network, two resources have a strong connection if they always perform the same activities but never any other. The generated network can be seen in Figure \ref{fig:figures-q2_jointactivities-png}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/q2_jointactivities.png}
+    \caption{Join-activities network generated through PM4Py}
+    \label{fig:figures-q2_jointactivities-png}
+\end{figure}
+
+The structure of the obtained network is very different from all networks we have considered up to this point. It consists of six strongly connected components. It seems that all of the components are fully connected, meaning that all resources in a component perform very similar activities. We see that the distinction between components is no longer based on the first letter of the resource name, as we have seen before. The components are now mixtures of these resources. This is not true for one of the components, which only contains A resources.
+
+For the organizational structure this again suggests the supervisor role for the A resources, there are certain activities that are only performed by these resources. Other activities however seem to occur in all of the B, C, D departments. Combining these findings with the findings from the other networks we can assume that the process is structured in such a way that the A department is a supervision department that performs certain specialized tasks. The other departments B, C, D, however perform similar activities (as the join-activity network suggest) but they never mix. This suggests that a case is delegate by the A resources to one of the departments and this department then fully handles the case. It is in a way not a delegation of cases based on certain types of cases, but just a balancing of cases over all departments.
+
+Motivated by these assumptions, we investigated further the data and the relation between the components and the process. We concluded that indeed the components B, C and D perform similar activities: they act on the treatment-related activities. The loose resource is the helicopter, which only acts on the emergency activity. Component A performs the remaining activities: initial trial of the patients, exams, tests, discharge, etc.
 
 \section{Q3. Performance Analysis}
 \textlangle Optional: Introduction \textrangle
@@ -284,7 +341,9 @@ For these, we can conclude that the Inductive Miner presented the best model out
 
 \section{Q5. Proccess Improve Suggestions}
 \textlangle Optional: Introduction \textrangle \\
-\textlangle Provide the answer here\textrangle
+
+Q1:
+- reduce noise in the logging process
 
 \newpage
 \section{Appendix}
