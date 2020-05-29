@@ -2,7 +2,7 @@ digraph Tree {
 node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
 edge [fontname=helvetica] ;
 0 [label=<event:Activity@Inform Authority Send Form &le; 0.5<br/>gini = 0.466<br/>samples = 1500<br/>value = [555, 945]<br/>class = LESSEQUAL>, fillcolor="#add7f4"] ;
-1 [label=<event:Activity@Discharge &le; 0.5<br/>gini = 0.044<br/>samples = 967<br/>value = [22, 945]<br/>class = LESSEQUAL>, fillcolor="#3e9fe6"] ;
+1 [label=<event:Activity@Register Facility &le; 0.5<br/>gini = 0.044<br/>samples = 967<br/>value = [22, 945]<br/>class = LESSEQUAL>, fillcolor="#3e9fe6"] ;
 0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
 2 [label=<gini = 0.0<br/>samples = 945<br/>value = [0, 945]<br/>class = LESSEQUAL>, fillcolor="#399de5"] ;
 1 -> 2 ;
