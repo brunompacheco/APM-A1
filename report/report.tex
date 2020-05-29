@@ -15,11 +15,11 @@
 \usepackage{subcaption}
 \setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
 
-\title{Report Assignment Part 1}								
+\title{Report Assignment Part 1}
 % Title
 \author{}						
 % Author
-\date{}
+\date{29.05.2020}
 % Date
 
 \makeatletter
@@ -98,7 +98,7 @@ After distinguishing the two instances of the \emph{Control Call} activity in th
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{figures/q1_b_tree.pdf}
+    \includegraphics[width=0.8\textwidth]{figures/q1_b_tree.pdf}
     \caption{Process Tree after \emph{Control Call} splitting}
     \label{fig:figures-q1_b_tree-pdf}
 \end{figure}
@@ -168,49 +168,11 @@ Removing these activities we get the model seen in Figure \ref{fig:dfg-pt-no-A}.
     \label{fig:dfg-pt-no-A}
 \end{figure}
 
-A side effect of removing theses traces is that the \emph{Prescripe Special Medication} activity vanished, so we removed just the activities, keeping the traces, which had the precise effect of bringing the mentioned activity back to the model, as can be seen in Figure \ref{fig:dfg-pt-silent-A}.
+A side effect of removing theses traces is that the \emph{Prescripe Special Medication} activity vanished, so we removed just the activities, keeping the traces, which had the precise effect of bringing the mentioned activity back to the model. A representation of this resulting model can be seen in Figure \ref{fig:dfg-pt-silent-A} in the appendix.
 
-\begin{figure}[h]
-    \centering
-    \begin{subfigure}[b]{0.2\textwidth}
-        \centering
-	\includegraphics[width=\textwidth]{figures/q1_d_silent_A.pdf}
-        \caption{DFG}
-        \label{fig:figures-q1_d_silent_A-pdf}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.7\textwidth}
-        \centering
-	\includegraphics[width=\textwidth]{figures/q1_d_tree_silent_A.pdf}
-        \caption{Process Tree}
-        \label{fig:figures-q1_d_tree_silent_A-pdf}
-    \end{subfigure}
-    \hfill
-    \caption{Model resulting after the filtering of just the activities related to the A treatments}
-    \label{fig:dfg-pt-silent-A}
-\end{figure}
 
-The fine tuning of the threshold resulted in the model that can be seen in Figure \ref{fig:noise-threshold-tuning-model}. This approach resulted in a model that represents more behaviors of the event log. The major outcome in the model would be the exclusive choice operator after the \emph{Decide Treatment} activity that distinguished between the treatments.
+The fine tuning of the threshold resulted in the model that can be seen in Figure \ref{fig:noise-threshold-tuning-model} in the appendix. This approach resulted in a model that represents more behaviors of the event log. The major outcome in the model would be the exclusive choice operator after the \emph{Decide Treatment} activity that distinguished between the treatments.
 
-\begin{figure}[h]
-    \centering
-    \begin{subfigure}[b]{0.2\textwidth}
-        \centering
-	\includegraphics[width=\textwidth]{figures/q1_d_dfg_noise_threshold_tuning.pdf}
-        \caption{DFG}
-        \label{fig:figures-q1_d_dfg_noise_threshold_tuning-pdf}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.7\textwidth}
-        \centering
-	\includegraphics[width=\textwidth]{figures/q1_d_noise_threshold_tuning.pdf}
-        \caption{Process Tree}
-        \label{fig:q1_d_noise_threshold_tuninig-pdf}
-    \end{subfigure}
-    \hfill
-    \caption{Model resulting from the tuning of the noise threshold}
-    \label{fig:noise-threshold-tuning-model}
-\end{figure}
 
 \paragraph{e)} 
 
@@ -322,9 +284,8 @@ For the organizational structure this again suggests the supervisor role for the
 Motivated by these assumptions, we investigated further the data and the relation between the components and the process. We concluded that indeed the components B, C and D perform similar activities: they act on the treatment-related activities. The loose resource is the helicopter, which only acts on the emergency activity. Component A performs the remaining activities: initial trial of the patients, exams, tests, discharge, etc.
 
 \section{Q3. Performance Analysis}
-\textlangle Optional: Introduction \textrangle
-\paragraph{a)} \textlangle Provide the answer here\textrangle
-\paragraph{b)} \textlangle Provide the answer here\textrangle
+\paragraph{a)} 
+\paragraph{b)}
 
 \section{Q4. Decision Points}
 
@@ -394,7 +355,50 @@ Regarding the performance of the process, the activities with the biggest impact
 As previously mentioned, facility \texttt{A} plays an important role in the process. Excluding facility \texttt{I}, it handles the most patients over the whole observed timeframe. Nevertheless we have found during our investigation, that it has the least resources available. At the same time we see that other facilities are often not handling a large number of patients, even tough there are more available resources. We therefore propose, if possible, to move resources from the facilities \texttt{B}, \texttt{C} and \texttt{D} to facility \texttt{A} to improve the resource situation.
 
 \newpage
-\section{Appendix}
+    
+\section*{Appendix}
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.2\textwidth}
+        \centering
+	\includegraphics[width=\textwidth]{figures/q1_d_silent_A.pdf}
+        \caption{DFG}
+        \label{fig:figures-q1_d_silent_A-pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.7\textwidth}
+        \centering
+	\includegraphics[width=\textwidth]{figures/q1_d_tree_silent_A.pdf}
+        \caption{Process Tree}
+        \label{fig:figures-q1_d_tree_silent_A-pdf}
+    \end{subfigure}
+    \hfill
+    \caption{Model resulting after the filtering of just the activities related to the A treatments}
+    \label{fig:dfg-pt-silent-A}
+\end{figure}
+
+Q1
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.2\textwidth}
+        \centering
+	\includegraphics[width=\textwidth]{figures/q1_d_dfg_noise_threshold_tuning.pdf}
+        \caption{DFG}
+        \label{fig:figures-q1_d_dfg_noise_threshold_tuning-pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.7\textwidth}
+        \centering
+	\includegraphics[width=\textwidth]{figures/q1_d_noise_threshold_tuning.pdf}
+        \caption{Process Tree}
+        \label{fig:q1_d_noise_threshold_tuninig-pdf}
+    \end{subfigure}
+    \hfill
+    \caption{Model resulting from the tuning of the noise threshold}
+    \label{fig:noise-threshold-tuning-model}
+\end{figure}
 
 \textbf{Q4}
 
