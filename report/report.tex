@@ -58,7 +58,8 @@
     \begin{flushright} \large
 			\emph{Submitted By:} \\
       Student 1 (Matr. Number) \\
-      Student 2 (Matr. Number) 
+      Student 2 (Matr. Number)  \\
+      Tom-Hendrik Hülsmann (355773)
 		\end{flushright}
 	\end{minipage}\\[2 cm]
 	
@@ -273,7 +274,7 @@ A handover-of-work network connects two resources when an activity performed by 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/q2_handover.png}
+    \includegraphics[width=0.6\textwidth]{figures/q2_handover.png}
     \caption{Handover-of-work network discovered through PM4Py}
     \label{fig:figures-q2_handover-png}
 \end{figure}
@@ -290,7 +291,7 @@ The obtained network that can be seen in Figure \ref{fig:figures-q2_subcontracti
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/q2_subcontracting.png}
+    \includegraphics[width=0.6\textwidth]{figures/q2_subcontracting.png}
     \caption{Subcontracting network discovered through PM4Py}
     \label{fig:figures-q2_subcontracting-png}
 \end{figure}
@@ -303,7 +304,7 @@ A working-together network depicts which resources are often working together on
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/q2_working_together.png}
+    \includegraphics[width=0.6\textwidth]{figures/q2_working_together.png}
     \caption{Working-together network generated through PM4Py}
     \label{fig:figures-q2_working_together-png}
 \end{figure}
@@ -318,7 +319,7 @@ A joint-activity network depicts how similar the types of activities are that th
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/q2_jointactivities.png}
+    \includegraphics[width=0.6\textwidth]{figures/q2_jointactivities.png}
     \caption{Join-activities network generated through PM4Py}
     \label{fig:figures-q2_jointactivities-png}
 \end{figure}
@@ -335,15 +336,87 @@ Motivated by these assumptions, we investigated further the data and the relatio
 \paragraph{b)} \textlangle Provide the answer here\textrangle
 
 \section{Q4. Decision Points}
-\textlangle Optional: Introduction \textrangle
-\paragraph{a)} \textlangle Provide the answer here\textrangle
-\paragraph{b)} \textlangle Provide the answer here\textrangle
+
+In this section we are interested in the kind of treatment that a patient will undergo based on certain properties. For this we want to create decision trees based on case attributes that can give us deeper insights into which patients receive which treatment.
+
+To do so we are interested in different treatment related events which allow us to group the cases contained in the log according to which kind of treatment they have received. PM4Py offers some functions that can help us create a decision tree that is predicting the end event of a case from the given case and event properties. Since we know that eventually all patients will be discharged from our previous analysis, most of the cases will end in one of the different discharge events (Discharge Init Exam, Discharge Test, Discharge). From this information we cannot infer which treatment was performed before the discharge. Because of this restriction of the raw log, we will preprocess the log before creating decision trees. This preprocessing includes the trimming of all cases. The trace of the case will be trimmed at the point at which a certain event occurs. This event is one of a set of events that describe the treatment of the patient. The events included in this set are \texttt{Treatment A1}, \texttt{Treatment A2}, \texttt{Treatment B}, \texttt{Discharge}, \texttt{Discharge Test} and \texttt{Discharge Init Exam}. These events are either related to a certain kind of treatment, or a discharge. The trace will be cut off at the first of these events that occurs in trace. The discharge events are also included here, for cases that do not receive any treatment. After this preprocessing step, all of the cases end with one of the events specified above.
+
+\paragraph{a)} 
+After preprocessing the event log we can now create a decision tree based on it. In the first step of this, we use PM4Py to create the data, targets and classes that will be passed to the sklearn decision tree algorithm. In this step we need to specify which properties of the event log should be used for the decision tree creation. We can specifiy trace based and event based attributes. For our first iteration we included all of the sensible log attributes (for example patient name was removed as it provides no information).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/q4_tree_all.png}
+    \caption{Decision tree based on all log attributes.}
+    \label{fig:figures-q4-tree-all-png}
+\end{figure}
+
+The obtained tree can be seen in \ref{fig:figures-q4-tree-all-png}, it is able to perfectly classify all cases, which is unexpected. A closer investigation shows that the tree simply uses the target events themselves to classify the cases, which of course is not wanted. As many of the events are always performed by the same or similar resources, this also holds true for the resource attribute. The two attributes are therefore not suited to be included in a sensible decision tree for this task.
+Furthermore we see that the tree once splits using the duration of an event. Since the tree holds no information about which event is related to this duration, we cannot derive meaningful results from this split. The attribute is therefore removed as well. With the remaining age and insurance attributes, we create a new decision tree in the following.
+
+Since the Discharge Init Exam event is disproportionally more frequent than all other classes, for this tree we needed to introduce some normalization in order to obtain a sensible tree (Else all nodes would have the same label for a small tree). Additionally, since the tree is not able to perfectly classify all cases anymore, we have to limit the depth and maximum number of child nodes in order to obtain readable results. The depth was capped at 7 and the maximum number of leaf nodes at 8.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/q4_tree_min.png}
+    \caption{Decision tree based on the remaining log attributes.}
+    \label{fig:figures-q4-tree-min-png}
+\end{figure}
+
+The resulting decision tree with a reduced attribute set can be seen in \ref{fig:figures-q4-tree-min-png}, it is much more interpretable. For example we see that patients older than 63.5 years that have a state insurance are more often discharged after the initial exam than ones with a private insurance. This group receives treatment B more frequently.
+Furthermore we can observe, that really young patients ($\leq15.5$) are more often discharged after having been tested, while older patients between 15.5 and 39.5 years are more often directly discharged after the initial exam.
+In general we can observe that privately insured patients receive any kind of treatment more frequently and are less often discharged without treatment.
+
+\paragraph{b)} 
+Based on our analysis in Q2, we know that the resources are heavily related to the facilities. More concrete the first letter of the name of the resource corresponds to the facility of the resource. We will therefore use this property for the distinction between the different facilities.
+For this we first create a new property called \emph{facility} that is derived from the first letter of the resource of the event. The unique facilities of the complete log are \texttt{A}, \texttt{B}, \texttt{C}, \texttt{D}, \texttt{I} and \texttt{H}. Based on this we add a new column that documents the move of a patient between two facilities. This is done by shifting the \emph{facility} column down by one. For further implementation details see the documentation. An excerpt of the resulting log can be seen in figure \ref{fig:figures-q4-fac-move-png}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/q4_fac_move.png}
+    \caption{The event data after the transformation.}
+    \label{fig:figures-q4-fac-move-png}
+\end{figure}
+
+Each event now contains the information about the facility move that has happened. For the calculation of these moves the start time of the events is used. That means we assume that the move between facilities happens at the start time of the current event. We can now use this move record to calculate how many patients currently are assigned to a certain facility for every event. We do this by going through the log chronologically and de- or increasing the patient count depending on the facility move that happened. Additionally we have assigned an initial patient count to all of the facilities. This was done because the given dataset is presumably not complete and the facilities have also operated in the time that is not captured by the dataset. A fitting initial value for the facilities was chosen based on the mean value of patients from a previous run of the algorithm and a visual interpretation of the patient counts, of which an excerpt can be seen in \ref{fig:figures-q4-fac-count-png}. We can see that there is some kind of weekly recurring pattern in the patient count of both facilities and that the patient count in facility \texttt{A} steadily rises up until the end.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/q4_fac_count.png}
+    \caption{The estimated patient count at the facilities \texttt{A} and \texttt{I}.}
+    \label{fig:figures-q4-fac-count-png}
+\end{figure}
+
+The estimated patient counts at the facilities were joined with the original event log again and transformed into the PM4Py event log representation. Based on that, a decision tree was created as discussed in a). The only attributes that were used were the newly created patient counts. We again applied a normalization and restricted the depth of the tree to 8, while setting the maximum number of leaf nodes to 8. The resulting decision tree can be seen in \ref{fig:figures-q4-facility-tree-png}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/q4_facility_tree.png}
+    \caption{The decision tree based on the patient count on the different facilities.}
+    \label{fig:figures-q4-facility-tree-png}
+\end{figure}
+
+The obtained decision tree is splitting the cases based on the number of patients in each of the facilities. The first split is done on the \texttt{A} facility. We observe that when there are fewer (less than 21) patients in facility \texttt{A}, more treatments are prescribed and less patients are discharged at the initial exam. This could mean that the facility is somehow overloaded when there are many patients, which influences the decision making. 
+
+On the second level we can also observe that there are more initial discharges if there are not many patients in facility \texttt{C}. As discovered in Q2, facility \texttt{C} is mainly concerned with checking treatments, so the reason here might be that when there are more people discharged, there is less need for treatment checks. On the other hand this may also indicate a potential bottleneck in \texttt{C}: There are not enough resources to perform checks, so patients are more frequently discharged.
+
+We also see that the facilities \texttt{B} and \texttt{D} were never used as a splitting criterion, which might indicate that the number of patients in these facilities has no big influence on the treatment and therefore there are enough resources in these facilities.
+
+Facility I is a good indicator for the overall number of "active" patients that are currently in the process, as patients stay in that facility for a longer time (for the control calls). The I facility patient count is therefore also used as a splitting criterion for some nodes. We again observe that treatments are less frequent for higher patient numbers.
+
+In a last step we calculated the number of resources in each facility to compare those numbers with the obtained patient numbers. We see that, although facility \texttt{A} has the highest patient load, it has the lowest number of resources (7) compared to the other "normal" facilities \texttt{B} (18), \texttt{C} (17) and \texttt{D} (17). This is a further indicator that facility \texttt{A} might be understaffed. We also see that there is only one resource in facility \texttt{I}, we have already observed this fact in Q2. This is probably the case as the control calls are somehow automated and performed by a single system, so there can be no resource bottlenecks here.
 
 \section{Q5. Proccess Improve Suggestions}
 \textlangle Optional: Introduction \textrangle \\
 
-Q1:
+\paragraph{Q1)} 
 - reduce noise in the logging process
+
+\paragraph{Q2)} 
+
+\paragraph{Q3)} 
+
+\paragraph{Q4)} 
 
 \newpage
 \section{Appendix}
