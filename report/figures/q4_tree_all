@@ -1,21 +1,21 @@
 digraph Tree {
 node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
 edge [fontname=helvetica] ;
-0 [label=<event:concept:name@Test III &le; 0.5<br/>gini = 0.665<br/>samples = 1457<br/>value = [431, 55, 216, 687, 68]<br/>class = Discharge Init Exam>, fillcolor="#cecef9"] ;
-1 [label=<gini = 0.0<br/>samples = 687<br/>value = [0, 0, 0, 687, 0]<br/>class = Discharge Init Exam>, fillcolor="#3c39e5"] ;
+0 [label=<event:concept:name@Discharge Init Exam &le; 0.5<br/>gini = 0.665<br/>samples = 1457<br/>value = [431, 55, 216, 687, 68]<br/>class = Discharge Init Exam>, fillcolor="#cecef9"] ;
+1 [label=<event:concept:name@Treatment B &le; 0.5<br/>gini = 0.595<br/>samples = 770<br/>value = [431, 55, 216, 0, 68]<br/>class = Treatment B>, fillcolor="#f5ceb2"] ;
 0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
-2 [label=<event:concept:name@Treatment B &le; 0.5<br/>gini = 0.595<br/>samples = 770<br/>value = [431, 55, 216, 0, 68]<br/>class = Treatment B>, fillcolor="#f5ceb2"] ;
-0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
-3 [label=<event:concept:name@Discharge Test &le; 0.5<br/>gini = 0.527<br/>samples = 339<br/>value = [0, 55, 216, 0, 68]<br/>class = Discharge Test>, fillcolor="#93f1df"] ;
+2 [label=<event:concept:name@Discharge Test &le; 0.5<br/>gini = 0.527<br/>samples = 339<br/>value = [0, 55, 216, 0, 68]<br/>class = Discharge Test>, fillcolor="#93f1df"] ;
+1 -> 2 ;
+3 [label=<event:@@duration &le; 1523.5<br/>gini = 0.494<br/>samples = 123<br/>value = [0, 55, 0, 0, 68]<br/>class = Treatment A2>, fillcolor="#fad9f3"] ;
 2 -> 3 ;
-4 [label=<event:@@duration &le; 1523.5<br/>gini = 0.494<br/>samples = 123<br/>value = [0, 55, 0, 0, 68]<br/>class = Treatment A2>, fillcolor="#fad9f3"] ;
+4 [label=<gini = 0.0<br/>samples = 55<br/>value = [0, 55, 0, 0, 0]<br/>class = Treatment A1>, fillcolor="#7be539"] ;
 3 -> 4 ;
-5 [label=<gini = 0.0<br/>samples = 55<br/>value = [0, 55, 0, 0, 0]<br/>class = Treatment A1>, fillcolor="#7be539"] ;
-4 -> 5 ;
-6 [label=<gini = 0.0<br/>samples = 68<br/>value = [0, 0, 0, 0, 68]<br/>class = Treatment A2>, fillcolor="#e539c0"] ;
-4 -> 6 ;
-7 [label=<gini = 0.0<br/>samples = 216<br/>value = [0, 0, 216, 0, 0]<br/>class = Discharge Test>, fillcolor="#39e5c5"] ;
-3 -> 7 ;
-8 [label=<gini = 0.0<br/>samples = 431<br/>value = [431, 0, 0, 0, 0]<br/>class = Treatment B>, fillcolor="#e58139"] ;
-2 -> 8 ;
+5 [label=<gini = 0.0<br/>samples = 68<br/>value = [0, 0, 0, 0, 68]<br/>class = Treatment A2>, fillcolor="#e539c0"] ;
+3 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 216<br/>value = [0, 0, 216, 0, 0]<br/>class = Discharge Test>, fillcolor="#39e5c5"] ;
+2 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 431<br/>value = [431, 0, 0, 0, 0]<br/>class = Treatment B>, fillcolor="#e58139"] ;
+1 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 687<br/>value = [0, 0, 0, 687, 0]<br/>class = Discharge Init Exam>, fillcolor="#3c39e5"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
 }
