@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label=<event:A &le; 21.5<br/>gini = 0.77<br/>samples = 1500<br/>value = [258.6, 55.0, 216.0, 343.5, 136.0, 33.0, 7.0, 1.0, 1.0<br/>1.0]<br/>class = Discharge Init Exam>, fillcolor="#eafcee"] ;
+1 [label=<event:I &le; 33.5<br/>gini = 0.775<br/>samples = 124<br/>value = [33.0, 10.0, 15.0, 15.5, 22.0, 1.0, 0.0, 0.0, 0.0<br/>1.0]<br/>class = Treatment B>, fillcolor="#fbede2"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+3 [label=<event:C &le; 0.5<br/>gini = 0.677<br/>samples = 34<br/>value = [9.0, 1.0, 8.0, 5.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]<br/>class = Treatment B>, fillcolor="#fdf7f2"] ;
+1 -> 3 ;
+5 [label=<gini = 0.0<br/>samples = 10<br/>value = [6.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]<br/>class = Treatment B>, fillcolor="#e58139"] ;
+3 -> 5 ;
+6 [label=<gini = 0.657<br/>samples = 24<br/>value = [3, 1, 8, 5, 0, 0, 0, 0, 0, 0]<br/>class = Discharge Test>, fillcolor="#def8ce"] ;
+3 -> 6 ;
+4 [label=<gini = 0.765<br/>samples = 90<br/>value = [24.0, 9.0, 7.0, 10.5, 22.0, 1.0, 0.0, 0.0, 0.0, 1.0]<br/>class = Treatment B>, fillcolor="#fefaf7"] ;
+1 -> 4 ;
+2 [label=<event:C &le; 1.5<br/>gini = 0.764<br/>samples = 1376<br/>value = [225.6, 45.0, 201.0, 328.0, 114.0, 32.0, 7.0, 1.0, 1.0<br/>0.0]<br/>class = Discharge Init Exam>, fillcolor="#e3fbe8"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+7 [label=<event:I &le; 77.5<br/>gini = 0.759<br/>samples = 1289<br/>value = [208.8, 41.0, 192.0, 312.0, 98.0, 27.0, 6.0, 1.0, 1.0<br/>0.0]<br/>class = Discharge Init Exam>, fillcolor="#e1fbe6"] ;
+2 -> 7 ;
+11 [label=<gini = 0.75<br/>samples = 576<br/>value = [96.0, 17.0, 67.0, 146.5, 44.0, 14.0, 3.0, 0.0, 0.0<br/>0.0]<br/>class = Discharge Init Exam>, fillcolor="#ddfae3"] ;
+7 -> 11 ;
+12 [label=<event:I &le; 114.5<br/>gini = 0.762<br/>samples = 713<br/>value = [112.8, 24.0, 125.0, 165.5, 54.0, 13.0, 3.0, 1.0, 1.0<br/>0.0]<br/>class = Discharge Init Exam>, fillcolor="#eafcee"] ;
+7 -> 12 ;
+13 [label=<gini = 0.768<br/>samples = 602<br/>value = [99.6, 23.0, 110.0, 132.0, 50.0, 11.0, 1.0, 1.0, 1.0<br/>0.0]<br/>class = Discharge Init Exam>, fillcolor="#f1fdf4"] ;
+12 -> 13 ;
+14 [label=<gini = 0.691<br/>samples = 111<br/>value = [13.2, 1.0, 15.0, 33.5, 4.0, 2.0, 2.0, 0.0, 0.0, 0.0]<br/>class = Discharge Init Exam>, fillcolor="#bdf6ca"] ;
+12 -> 14 ;
+8 [label=<event:I &le; 43.5<br/>gini = 0.8<br/>samples = 87<br/>value = [16.8, 4.0, 9.0, 16.0, 16.0, 5.0, 1.0, 0.0, 0.0, 0.0]<br/>class = Treatment B>, fillcolor="#fffdfc"] ;
+2 -> 8 ;
+9 [label=<gini = 0.198<br/>samples = 3<br/>value = [0.0, 0.0, 0.0, 0.5, 4.0, 0.0, 0.0, 0.0, 0.0, 0.0]<br/>class = Treatment A2>, fillcolor="#52e8cc"] ;
+8 -> 9 ;
+10 [label=<gini = 0.803<br/>samples = 84<br/>value = [16.8, 4.0, 9.0, 15.5, 12.0, 5.0, 1.0, 0.0, 0.0, 0.0]<br/>class = Treatment B>, fillcolor="#fefcfa"] ;
+8 -> 10 ;
+}
