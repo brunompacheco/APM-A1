@@ -58,7 +58,7 @@
     \begin{flushright} \large
 			\emph{Submitted By:} \\
       Student 1 (Matr. Number) \\
-      Student 2 (Matr. Number)  \\
+      Bruno Machado Pacheco (403532)  \\
       Tom-Hendrik Hülsmann (355773)
 		\end{flushright}
 	\end{minipage}\\[2 cm]
@@ -68,14 +68,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewcommand{\thesection}{\arabic{section}}
-General notes:
-\begin{itemize}
-  \item Remove this general note page and the text in \textlangle \textrangle
-  \item This report should be at most 20 A4 pages, including the title page 
-  \item	Data supporting your claims should be presented in a suitable and comprehensible aggregated form (diagrams, pictures, charts) and not as raw data tables (they can be added in the appendix)
-  \item Submit this report as a PDF file
-\end{itemize}
-\newpage
 
 \section{Q1. Inductive Miner}
 
@@ -346,7 +338,7 @@ After preprocessing the event log we can now create a decision tree based on it.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{figures/q4_tree_all.png}
+    \includegraphics[width=0.5\textwidth]{figures/q4_tree_all.pdf}
     \caption{Decision tree based on all log attributes.}
     \label{fig:figures-q4-tree-all-png}
 \end{figure}
@@ -354,11 +346,11 @@ After preprocessing the event log we can now create a decision tree based on it.
 The obtained tree can be seen in \ref{fig:figures-q4-tree-all-png}, it is able to perfectly classify all cases, which is unexpected. A closer investigation shows that the tree simply uses the target events themselves to classify the cases, which of course is not wanted. As many of the events are always performed by the same or similar resources, this also holds true for the resource attribute. The two attributes are therefore not suited to be included in a sensible decision tree for this task.
 Furthermore we see that the tree once splits using the duration of an event. Since the tree holds no information about which event is related to this duration, we cannot derive meaningful results from this split. The attribute is therefore removed as well. With the remaining age and insurance attributes, we create a new decision tree in the following.
 
-Since the Discharge Init Exam event is disproportionally more frequent than all other classes, for this tree we needed to introduce some normalization in order to obtain a sensible tree (Else all nodes would have the same label for a small tree). Additionally, since the tree is not able to perfectly classify all cases anymore, we have to limit the depth and maximum number of child nodes in order to obtain readable results. The depth was capped at 7 and the maximum number of leaf nodes at 8.
+Since the \emph{Discharge Init Exam} event is disproportionally more frequent than all other classes, for this tree we needed to introduce some normalization in order to obtain a sensible tree (Else all nodes would have the same label for a small tree). Additionally, since the tree is not able to perfectly classify all cases anymore, we have to limit the depth and maximum number of child nodes in order to obtain readable results. The depth was capped at 7 and the maximum number of leaf nodes at 8.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\textwidth]{figures/q4_tree_min.png}
+    \includegraphics[width=0.9\textwidth]{figures/q4_tree_min.pdf}
     \caption{Decision tree based on the remaining log attributes.}
     \label{fig:figures-q4-tree-min-png}
 \end{figure}
@@ -391,7 +383,7 @@ The estimated patient counts at the facilities were joined with the original eve
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{figures/q4_facility_tree.png}
+    \includegraphics[width=\textwidth]{figures/q4_facility_tree.pdf}
     \caption{The decision tree based on the patient count on the different facilities.}
     \label{fig:figures-q4-facility-tree-png}
 \end{figure}
@@ -407,14 +399,14 @@ Facility I is a good indicator for the overall number of "active" patients that 
 In a last step we calculated the number of resources in each facility to compare those numbers with the obtained patient numbers. We see that, although facility \texttt{A} has the highest patient load, it has the lowest number of resources (7) compared to the other "normal" facilities \texttt{B} (18), \texttt{C} (17) and \texttt{D} (17). This is a further indicator that facility \texttt{A} might be understaffed. We also see that there is only one resource in facility \texttt{I}, we have already observed this fact in Q2. This is probably the case as the control calls are somehow automated and performed by a single system, so there can be no resource bottlenecks here.
 
 \section{Q5. Proccess Improve Suggestions}
-\textlangle Optional: Introduction \textrangle \\
 
-\paragraph{Q1)} 
-- reduce noise in the logging process
+As was noticed from the very first analysis, the data has some imperfections. This challenged the modeling of the process and limited our analysis. For this, our first suggestion is towards an improvement in the registry of the activities. This could allow for a deeper understanding of the process and increase the possibility of identifying opportunities in it.
 
-\paragraph{Q2)} 
+When analysing the structure of the resources, we identified the groups of resources that are responsible for the activities. This way it is possible to drive investments towards the resource groups that are more impacting in the problem activities. Unfortunately it is not possible to analyse how is the resources pool impacting the performance of the process, as no sufficient information was provided.
 
-\paragraph{Q3)} 
+Regarding the performance of the process, the activities with the biggest impact were the control calls. Assuming that these activities are performed while the patients wait for the tests or for the treatments to begin, we can infer that these waiting lines are the most influential factors for the process poor performance. Therefore, we suggest the investment in speeding up the application of the test and the beginning of the treatments.
+
+Still about the performance, we identified that the component C seems to be either underperforming or overloaded, as it is executing longer processes. Thus, further investigation on this group is recommended.
 
 \paragraph{Q4)} 
 
